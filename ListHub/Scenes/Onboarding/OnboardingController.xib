@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingController" customModule="ListHub" customModuleProvider="target">
+            <connections>
+                <outlet property="letsGoButton" destination="CVU-vY-MHX" id="kft-32-Qrx"/>
+                <outlet property="onboardingCollectionView" destination="XLR-N3-aIi" id="c5m-gE-j26"/>
+                <outlet property="onboardingPageControll" destination="bzu-DD-q15" id="7Yt-Cg-jBQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XLR-N3-aIi" customClass="BEKMultiCellCollection" customModule="BEKListKit">
+                    <rect key="frame" x="0.0" y="64" width="414" height="798"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ONd-hI-M8q">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="bzu-DD-q15">
+                    <rect key="frame" x="0.0" y="825" width="414" height="37"/>
+                    <color key="backgroundColor" red="0.0" green="0.42745098040000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="pageIndicatorTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="currentPageIndicatorTintColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVU-vY-MHX">
+                    <rect key="frame" x="343" y="783" width="55" height="30"/>
+                    <state key="normal" title="Let's go"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bzu-DD-q15" firstAttribute="top" secondItem="CVU-vY-MHX" secondAttribute="bottom" constant="12" id="DPj-jX-u1i"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bzu-DD-q15" secondAttribute="trailing" id="GtW-S4-OAJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CVU-vY-MHX" secondAttribute="trailing" constant="16" id="Ico-eI-tQY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XLR-N3-aIi" secondAttribute="trailing" id="Qf1-4L-0cc"/>
+                <constraint firstItem="XLR-N3-aIi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Rd6-f2-9QU"/>
+                <constraint firstItem="XLR-N3-aIi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WDO-O3-PLg"/>
+                <constraint firstItem="bzu-DD-q15" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="XxS-m6-zDw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XLR-N3-aIi" secondAttribute="bottom" id="dkr-ZQ-liP"/>
+                <constraint firstItem="bzu-DD-q15" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fqw-Tg-A2n"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="107"/>
+        </view>
+    </objects>
+</document>

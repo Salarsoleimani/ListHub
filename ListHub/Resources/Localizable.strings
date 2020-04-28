@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  ListHub
+
+  Created by Salar Soleimani on 2020-04-14.
+  Copyright © 2020 BEKSAS. All rights reserved.
+*/
+
+// SHARED
+
+
+/// Rate
+
+"Rate_alertCancelTitle" = "Not now, thanks";
+"Rate_alertMessage" = "If you enjoy using Virus Care, would you mind taking a moment to rate it? it just takes less than a minute. it supports to encourage us to make the app more sufficient.\nThanks for your support 🙌🏾";
+"Rate_alertRateLaterTitle" = "Remind me later";
+"Rate_alertRateTitle" = "Rate Virus Care";
+"Rate_alertTitle" = "Please rate us 🙂";
+
+// ONBOARDING
+
+"onboarding_title1" = "Dynamic Lists";
+"onboarding_title2" = "Different Elements!";
+"onboarding_title3" = "Organize Your Stuff";
+"onboarding_title4" = "My First List";
+
+"onboarding_description1" = "Make your list dynamicaly, no matter it is a todo or gerocery or something else.\nYou decide what you want or choose from our templates.";
+"onboarding_description2" = "Add unlimited different elements to your lists.\nSuch as: Date, Title, Description, Stepper, Image, ...";
+"onboarding_description3" = "You are a collectioner! forget what did you borrow your friend?\nSimply add a description element to your collection list and write who did you borrow to.";
+"onboarding_description4" = "Start creating a list by + button.";
+
+// LISTS
+"lists_navigation_title" = "My Lists";
+
+// SETTING
+"setting_navigation_title" = "Setting";
