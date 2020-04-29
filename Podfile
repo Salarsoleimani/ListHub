@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 def quickDB
-  pod 'QuickDB'
+  pod 'QuickDB', :git => 'https://github.com/behrad-kzm/QuickDB'
 end
 
 target 'ListHub' do

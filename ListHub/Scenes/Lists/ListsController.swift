@@ -50,7 +50,8 @@ class ListsController: UIViewController {
     outputs.lists.subscribe(onNext: { [myListsCollectionView] (lists) in
       for list in lists {
         let vm = ListItemViewModel(model: list)
-        //myListsCollectionView.push(cell: BEKGenericCell.Collection<ListCell>(viewModel: vm))
+        let cell = BEKGenericCell.Collection<ListCell>(viewModel: vm)
+        myListsCollectionView?.push(cell: cell)
       }
     }).disposed(by: disposeBag)
   }

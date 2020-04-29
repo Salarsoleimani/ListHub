@@ -43,7 +43,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LrI-G9-bT0" firstAttribute="leading" secondItem="4rN-Ej-CNc" secondAttribute="leading" constant="16" id="0kI-aI-C5j"/>
                             <constraint firstAttribute="trailing" secondItem="iMw-6S-Ve6" secondAttribute="trailing" constant="8" id="aU2-rw-xOm"/>
@@ -64,6 +64,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="176" height="192"/>
             <connections>
+                <outlet property="containerView" destination="4rN-Ej-CNc" id="buh-GG-JJ3"/>
                 <outlet property="iconImageView" destination="LrI-G9-bT0" id="JGM-bi-Xbs"/>
                 <outlet property="quantityLabel" destination="1P5-sN-g3B" id="4Hx-yh-oHY"/>
                 <outlet property="titleLabel" destination="fjN-kE-7zD" id="lKf-af-lTa"/>

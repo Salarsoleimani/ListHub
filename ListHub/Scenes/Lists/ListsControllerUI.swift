@@ -19,7 +19,6 @@ extension ListsController {
   }
   private func setupNavigationUI() {
     navigationController?.setNavigationBarHidden(false, animated: false)
-    navigationItem.title = "lists_navigation_title".localize()
     navigationItem.rightBarButtonItem = addListBarButton
     navigationItem.leftBarButtonItem = settingBarButton
   }
@@ -31,8 +30,8 @@ extension ListsController {
 
   }
   private func setupCollectionView() {
-    let width = (StaticConstants.mainScreenWidth - 48) / 2
+    let width = (StaticConstants.mainScreenWidth - 24) / 2
     let size = CGSize(width: width , height: width)
-    myListsCollectionView.collectionViewLayout = BEKCollectionLayoutComposer.makeLayout(ForItemSize: size, minimumLineSpacing:  8.0, minimumInteritemSpacing: 8.0, estimatedItemSize: size, scrollDirection: .vertical)
+    myListsCollectionView.collectionViewLayout = BEKCollectionLayoutComposer.makeLayout(ForItemSize: size, minimumLineSpacing:  0, minimumInteritemSpacing: 0, estimatedItemSize: .zero, scrollDirection: .vertical)
   }
 }

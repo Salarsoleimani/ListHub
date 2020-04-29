@@ -6,7 +6,7 @@
 //  Copyright © 2020 BEKApps. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // testAdUnitIds
 let testAdBannerUnitID = "ca-app-pub-3940256099942544/2934735716"
@@ -37,5 +37,8 @@ enum Constants {
   }
   enum HeroIds: String {
     case toSetting = "Hero.ToSetting"
+  }
+  struct Radius {
+    static let listCellRadius: CGFloat = 10
   }
 }

@@ -3,16 +3,16 @@ PODS:
   - Hero (1.5.0)
   - Instructions (1.4.0)
   - IQKeyboardManagerSwift (6.5.5)
-  - QuickDB (2.0.0)
+  - QuickDB (2.0.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
-  - SDWebImage (5.7.2):
-    - SDWebImage/Core (= 5.7.2)
-  - SDWebImage/Core (5.7.2)
+  - SDWebImage (5.7.3):
+    - SDWebImage/Core (= 5.7.3)
+  - SDWebImage/Core (5.7.3)
   - Siren (5.4.0)
   - Stellar (0.67)
   - SwiftRater (1.8.0)
@@ -22,7 +22,7 @@ DEPENDENCIES:
   - Hero
   - Instructions
   - IQKeyboardManagerSwift
-  - QuickDB
+  - QuickDB (from `https://github.com/behrad-kzm/QuickDB`)
   - RxCocoa
   - RxSwift
   - SDWebImage
@@ -36,7 +36,6 @@ SPEC REPOS:
     - Hero
     - Instructions
     - IQKeyboardManagerSwift
-    - QuickDB
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -45,10 +44,15 @@ SPEC REPOS:
     - SwiftRater
 
 EXTERNAL SOURCES:
+  QuickDB:
+    :git: https://github.com/behrad-kzm/QuickDB
   Stellar:
     :git: https://github.com/AugustRush/Stellar.git
 
 CHECKOUT OPTIONS:
+  QuickDB:
+    :commit: 83e31c413a396ea31af10b9f0caa3705111be5f3
+    :git: https://github.com/behrad-kzm/QuickDB
   Stellar:
     :commit: 6c192427621f8b52f3b155d0088e1eabd156abe0
     :git: https://github.com/AugustRush/Stellar.git
@@ -58,15 +62,15 @@ SPEC CHECKSUMS:
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   Instructions: 8986424854e99640665a82cfe56852c52a0c5bdf
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
-  QuickDB: f2be058ee87fe92100d98478ad98ac6f1d0379d7
+  QuickDB: d7bb43c01b664fb935963f1756da5f42c9734b54
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  SDWebImage: d9ea4959d99c52276dfada481987018fcaea3d58
+  SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
   Siren: 9df16ed5278cfaad7ea034f3d2206e4f6983e9b8
   Stellar: df980becd194eeb62d623af097582da0ef2219b9
   SwiftRater: 6094fa6e9b3866ff8beca0a871b4b5f9ab896a6d
 
-PODFILE CHECKSUM: 61ef1c42c233ec0dac0cfca7f6483ae5196ce2c1
+PODFILE CHECKSUM: 311f657b64daa342832f2822fa185a5bc944c78e
 
 COCOAPODS: 1.9.0

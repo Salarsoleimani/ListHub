@@ -21,10 +21,10 @@ final class ListsViewModel: ViewModelType {
 // MARK:- Functions
   func transform(input: ListsViewModel.Input) -> ListsViewModel.Output {
     let addListTrigger = input.addListTrigger.map { [navigator] _ -> Void in
-//      let list1 = ListModel(title: "Movie", description: "hame khuba", iconId: 1, iconColor: 0x3C6CFF, templateType: .none)
-//      let list2 = ListModel(title: "Work", description: "hame khubaye 2", iconId: 1, iconColor: 0xB933FF, templateType: .none)
-//      self.engine.add(List: list1, response: nil)
-//      self.engine.add(List: list2, response: nil)
+      let list1 = ListModel(title: "Movie", description: "hame khuba", iconId: 1, iconColor: 0x3C6CFF)
+      let list2 = ListModel(title: "Work", description: "hame khubaye 2", iconId: 1, iconColor: 0xB933FF)
+      self.engine.add(List: list1, response: nil)
+      self.engine.add(List: list2, response: nil)
       navigator.toAddList()
     }
     let openSettingTrigger = input.openSettingTrigger.map { [navigator] _ -> Void in
