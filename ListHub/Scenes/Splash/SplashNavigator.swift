@@ -15,10 +15,10 @@ final class SplashNavigator: Navigator {
     //AnalyticLogProvider.logNavigator(name: NSStringFromClass(type(of: self)), functionName: "setup")
   }
   func toOnboarding() {
-    OnboardingNavigator(navigationController: navigationController).setup()
+    OnboardingNavigator(navigationController: navigationController, appEngine: appEngine).setup()
   }
   
   func toLists() {
-    ListsNavigator(navigationController: navigationController).setup()
+    ListsNavigator(navigationController: navigationController, appEngine: appEngine).setup()
   }
 }

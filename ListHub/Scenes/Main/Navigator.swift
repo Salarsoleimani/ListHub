@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Domain
+import AppEngine
 
 class Navigator: NSObject {
   internal let navigationController: UINavigationController
-  
-  init(navigationController: UINavigationController) {
+  internal let appEngine: EngineManagerProtocol
+
+  init(navigationController: UINavigationController, appEngine: EngineManagerProtocol) {
     self.navigationController = navigationController
+    self.appEngine = appEngine
   }
 }
+
+

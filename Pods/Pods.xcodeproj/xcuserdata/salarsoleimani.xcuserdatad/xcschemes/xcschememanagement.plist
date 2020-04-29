@@ -23,70 +23,91 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>Pods-ListHub-Domain.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>Pods-ListHub.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>RxCocoa.xcscheme</key>
+		<key>Instructions.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-ListHub-DatabaseManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>RxRelay.xcscheme</key>
+		<key>Pods-ListHub-Domain.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>RxSwift.xcscheme</key>
+		<key>Pods-ListHub.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>QuickDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>SDWebImage.xcscheme</key>
+		<key>RxCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>Siren.xcscheme</key>
+		<key>RxRelay.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
-		<key>Stellar.xcscheme</key>
+		<key>RxSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
-		<key>SwiftRater.xcscheme</key>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>11</integer>
+		</dict>
+		<key>Siren.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>Stellar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
+		<key>SwiftRater.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>14</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

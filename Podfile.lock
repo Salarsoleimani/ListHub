@@ -1,7 +1,9 @@
 PODS:
   - BEKListKit (1.0.3)
   - Hero (1.5.0)
+  - Instructions (1.4.0)
   - IQKeyboardManagerSwift (6.5.5)
+  - QuickDB (2.0.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -18,7 +20,9 @@ PODS:
 DEPENDENCIES:
   - BEKListKit
   - Hero
+  - Instructions
   - IQKeyboardManagerSwift
+  - QuickDB
   - RxCocoa
   - RxSwift
   - SDWebImage
@@ -30,7 +34,9 @@ SPEC REPOS:
   trunk:
     - BEKListKit
     - Hero
+    - Instructions
     - IQKeyboardManagerSwift
+    - QuickDB
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -50,7 +56,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   BEKListKit: eced55022c40444e55975752a03595751286e123
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
+  Instructions: 8986424854e99640665a82cfe56852c52a0c5bdf
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  QuickDB: f2be058ee87fe92100d98478ad98ac6f1d0379d7
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
@@ -59,6 +67,6 @@ SPEC CHECKSUMS:
   Stellar: df980becd194eeb62d623af097582da0ef2219b9
   SwiftRater: 6094fa6e9b3866ff8beca0a871b4b5f9ab896a6d
 
-PODFILE CHECKSUM: c99dd0ef63d2054d9a587be3e73655dac288b7db
+PODFILE CHECKSUM: 61ef1c42c233ec0dac0cfca7f6483ae5196ce2c1
 
 COCOAPODS: 1.9.0

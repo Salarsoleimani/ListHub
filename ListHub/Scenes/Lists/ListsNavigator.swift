@@ -11,7 +11,7 @@ import Foundation
 final class ListsNavigator: Navigator {
   func setup() {
     let vc = ListsController.initFromNib()
-    vc.viewModel = ListsViewModel(navigator: self)
+    vc.viewModel = ListsViewModel(navigator: self, engine: appEngine)
     navigationController.setViewControllers([vc], animated: true)
     //AnalyticLogProvider.logNavigator(name: NSStringFromClass(type(of: self)), functionName: "setup")
   }
@@ -22,6 +22,6 @@ final class ListsNavigator: Navigator {
     
   }
   func toSetting() {
-    SettingNavigator(navigationController: navigationController).setup()
+    SettingNavigator(navigationController: navigationController, appEngine: appEngine).setup()
   }
 }

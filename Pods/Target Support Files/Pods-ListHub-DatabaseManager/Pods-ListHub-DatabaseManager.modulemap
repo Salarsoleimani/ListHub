@@ -1,0 +1,6 @@
+framework module Pods_ListHub_DatabaseManager {
+  umbrella header "Pods-ListHub-DatabaseManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -11,6 +11,7 @@ import Domain
 import Siren
 import SwiftRater
 import IQKeyboardManagerSwift
+import AppEngine
 
 final class Application {
   static let shared = Application()
@@ -23,7 +24,7 @@ final class Application {
     let mainNavigationController = MainNavigationController()
     window.rootViewController = mainNavigationController
     window.makeKeyAndVisible()
-    SplashNavigator(navigationController: mainNavigationController).setup()
+    SplashNavigator(navigationController: mainNavigationController, appEngine: AppEngineManager()).setup()
   }
   
   func setupApplicationConfigurations() {

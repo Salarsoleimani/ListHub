@@ -8,8 +8,11 @@
 
 import Foundation
 
-public protocol DataBaseEProtocol {
-	func get(Entities response: (Result<[EntityModel], DataBaseError>) -> Void)
-	func delete(Entity entityId: UUID, response: (Result<Void, DataBaseError>) -> Void)
-	func update(Entity model: EntityModel, components: [ComponentType], response: (Result<Void, DataBaseError>) -> Void)
+public protocol DatabaseManagerProtocol {
+  func add(List list: ListModel, response: @escaping (Bool) -> Void)
+	func get(Lists response: @escaping ([ListModel]) -> Void)
+	func delete(List id: UUID,  response: @escaping (Bool) -> Void)
+	func update(List list: ListModel, components: [ComponentType], response: @escaping (Bool) -> Void)
 }
+
+

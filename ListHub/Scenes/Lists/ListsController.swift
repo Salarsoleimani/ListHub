@@ -9,6 +9,7 @@
 import UIKit
 import BEKListKit
 import RxSwift
+import Instructions
 
 class ListsController: UIViewController {
   // MARK:- Outlets
@@ -19,15 +20,26 @@ class ListsController: UIViewController {
   let settingBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_add_list"), style: .plain, target: nil, action: nil)
   let addListBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_add_list"), style: .plain, target: nil, action: nil)
   
+  let coachMarksController = CoachMarksController()
+  
   let disposeBag = DisposeBag()
   // MARK:- LifeCycles
-	override func viewDidLoad() {
-		super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
     setupUI()
     bindData()
+    setupCoachMark()
+  }
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    coachMarksController.start(in: .currentWindow(of: self))
+  }
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    coachMarksController.stop(immediately: true)
   }
   // MARK:- Actions
-
+  
   // MARK:- Functions
   private func bindData() {
     let inputs = ListsViewModel.Input(selectedList: myListsCollectionView.rx.itemSelected.asDriver(), addListTrigger: addListBarButton.rx.tap.asDriver(), openSettingTrigger: settingBarButton.rx.tap.asDriver())
@@ -37,4 +49,3 @@ class ListsController: UIViewController {
     outputs.openSettingTrigger.drive().disposed(by: disposeBag)
   }
 }
-

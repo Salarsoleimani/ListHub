@@ -12,13 +12,16 @@ import RxCocoa
 final class ListsViewModel: ViewModelType {
 // MARK:- Constants
   private let navigator: ListsNavigator
+  private let engine: EngineManagerProtocol
 // MARK:- Initialization
-  init(navigator: ListsNavigator) {
+  init(navigator: ListsNavigator, engine: EngineManagerProtocol) {
     self.navigator = navigator
+    self.engine = engine
   }
 // MARK:- Functions
   func transform(input: ListsViewModel.Input) -> ListsViewModel.Output {
     let addListTrigger = input.addListTrigger.map { [navigator] _ -> Void in
+      
       navigator.toAddList()
     }
     let openSettingTrigger = input.openSettingTrigger.map { [navigator] _ -> Void in

@@ -31,6 +31,7 @@
 
 // LISTS
 "lists_navigation_title" = "My Lists";
+"lists_add_coachmark" = "Start creating a list by click on + button";
 
 // SETTING
 "setting_navigation_title" = "Setting";
