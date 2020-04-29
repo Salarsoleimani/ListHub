@@ -8,12 +8,13 @@
 
 import UIKit
 import Hero
+import BEKListKit
 
 extension ListsController {
   func setupUI() {
     setupHero()
     setupNavigationUI()
-      
+    setupCollectionView()
     view.backgroundColor = ListHubColor.background.value
   }
   private func setupNavigationUI() {
@@ -28,5 +29,10 @@ extension ListsController {
     //view.heroID = Constants.HeroIds.toSetting.rawValue
     heroModalAnimationType = .pageIn(direction: .right)
 
+  }
+  private func setupCollectionView() {
+    let width = (StaticConstants.mainScreenWidth - 48) / 2
+    let size = CGSize(width: width , height: width)
+    myListsCollectionView.collectionViewLayout = BEKCollectionLayoutComposer.makeLayout(ForItemSize: size, minimumLineSpacing:  8.0, minimumInteritemSpacing: 8.0, estimatedItemSize: size, scrollDirection: .vertical)
   }
 }

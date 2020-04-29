@@ -10,5 +10,5 @@ import Foundation
 
 public protocol EngineManagerProtocol {
   func getLists(response: @escaping ([ListModel]) -> Void)
-  func add(List list: ListModel, response: @escaping (Bool) -> Void)  
+  func add(List list: ListModel, response: ((Bool) -> Void)?)  
 }

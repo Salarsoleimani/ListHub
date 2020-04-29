@@ -25,7 +25,7 @@ final public class DBManager: DatabaseManagerProtocol {
     }
   }
 
-  public func add(List list: ListModel, response: @escaping (Bool) -> Void) {
+  public func add(List list: ListModel, response: ((Bool) -> Void)?) {
     quickDB.insert(model: list, withTag: Constants.Tags.list, completion: response)
   }
   

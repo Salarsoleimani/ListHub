@@ -33,6 +33,11 @@
 		250DAB7E24592206006C8895 /* ListTemplateTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB7D24592206006C8895 /* ListTemplateTypes.swift */; };
 		250DAB80245929E1006C8895 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB7F245929E1006C8895 /* Constants.swift */; };
 		250DAB8324592DA7006C8895 /* Icons.json in Resources */ = {isa = PBXBuildFile; fileRef = 250DAB8224592DA7006C8895 /* Icons.json */; };
+		250DAB8624592E5A006C8895 /* SSMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB8524592E5A006C8895 /* SSMocker.swift */; };
+		250DAB8824592E9B006C8895 /* IconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB8724592E9B006C8895 /* IconModel.swift */; };
+		250DAB8C24593425006C8895 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB8A24593425006C8895 /* ListCell.swift */; };
+		250DAB8D24593425006C8895 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250DAB8B24593425006C8895 /* ListCell.xib */; };
+		250DAB8F24593437006C8895 /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB8E24593437006C8895 /* ListItemViewModel.swift */; };
 		25C082E724457EF0001578D1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C082E624457EF0001578D1 /* CloudKit.framework */; };
 		25C082F124457F67001578D1 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 25C082EF24457F67001578D1 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25C082F424457F67001578D1 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C082ED24457F67001578D1 /* Domain.framework */; };
@@ -184,6 +189,11 @@
 		250DAB7D24592206006C8895 /* ListTemplateTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTemplateTypes.swift; sourceTree = "<group>"; };
 		250DAB7F245929E1006C8895 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		250DAB8224592DA7006C8895 /* Icons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Icons.json; sourceTree = "<group>"; };
+		250DAB8524592E5A006C8895 /* SSMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSMocker.swift; sourceTree = "<group>"; };
+		250DAB8724592E9B006C8895 /* IconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModel.swift; sourceTree = "<group>"; };
+		250DAB8A24593425006C8895 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		250DAB8B24593425006C8895 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		250DAB8E24593437006C8895 /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
 		25C082E424457EEA001578D1 /* List Hub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "List Hub.entitlements"; sourceTree = "<group>"; };
 		25C082E624457EF0001578D1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		25C082ED24457F67001578D1 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,7 +348,6 @@
 				25C082E424457EEA001578D1 /* List Hub.entitlements */,
 				25C08316244583D4001578D1 /* Useful */,
 				25C0831124458388001578D1 /* Utils */,
-				25C0830D2445822A001578D1 /* Extensions */,
 				25C083092445814A001578D1 /* Resources */,
 				25C083072445812F001578D1 /* Scenes */,
 				25C08306244580B1001578D1 /* Configurations */,
@@ -386,12 +395,36 @@
 			path = AppEngineTests;
 			sourceTree = "<group>";
 		};
-		250DAB8124592D7F006C8895 /* JSONs */ = {
+		250DAB8124592D7F006C8895 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
 				250DAB8224592DA7006C8895 /* Icons.json */,
+				250DAB8724592E9B006C8895 /* IconModel.swift */,
 			);
-			path = JSONs;
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		250DAB8424592E2B006C8895 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				25C0831224458394001578D1 /* Utility.swift */,
+				25C08314244583B8001578D1 /* Vibrator.swift */,
+				25C0831D24458496001578D1 /* UserDefaults.swift */,
+				25C08321244585AA001578D1 /* LanguageManager.swift */,
+				25C0834524458D66001578D1 /* SoundEffects.swift */,
+				250DAB8524592E5A006C8895 /* SSMocker.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		250DAB8924593411006C8895 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				250DAB8A24593425006C8895 /* ListCell.swift */,
+				250DAB8B24593425006C8895 /* ListCell.xib */,
+				250DAB8E24593437006C8895 /* ListItemViewModel.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		25C082E524457EF0001578D1 /* Frameworks */ = {
@@ -471,6 +504,7 @@
 		25C0830824458137001578D1 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				250DAB8924593411006C8895 /* Cell */,
 				13B6C5FF2443B136006BE51D /* ListsController.swift */,
 				25C0833624458A86001578D1 /* ListsController.xib */,
 				25C0833824458A9F001578D1 /* ListsNavigator.swift */,
@@ -488,7 +522,7 @@
 				25C0830B2445817B001578D1 /* ListHubColor.swift */,
 				13B6C6072443B14E006BE51D /* Assets.xcassets */,
 				25C08353244590FE001578D1 /* Localizable.strings */,
-				250DAB8124592D7F006C8895 /* JSONs */,
+				250DAB8124592D7F006C8895 /* Icons */,
 				25C0834B24458D9A001578D1 /* Sounds */,
 				25C0830A2445815C001578D1 /* Fonts */,
 			);
@@ -516,11 +550,8 @@
 		25C0831124458388001578D1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				25C0831224458394001578D1 /* Utility.swift */,
-				25C08314244583B8001578D1 /* Vibrator.swift */,
-				25C0831D24458496001578D1 /* UserDefaults.swift */,
-				25C08321244585AA001578D1 /* LanguageManager.swift */,
-				25C0834524458D66001578D1 /* SoundEffects.swift */,
+				25C0830D2445822A001578D1 /* Extensions */,
+				250DAB8424592E2B006C8895 /* Components */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -845,6 +876,7 @@
 				25E0DF6E245783630061C293 /* OnboardingCell.xib in Resources */,
 				25E0DF71245783630061C293 /* OnboardingController.xib in Resources */,
 				25C0834A24458D8B001578D1 /* ErrorSound.mp3 in Resources */,
+				250DAB8D24593425006C8895 /* ListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -976,6 +1008,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250DAB8624592E5A006C8895 /* SSMocker.swift in Sources */,
 				25E0DF7A2457E0290061C293 /* OnboardingControllerUI.swift in Sources */,
 				25C0835224458E1B001578D1 /* ListHubFont.swift in Sources */,
 				25C0832724458804001578D1 /* MainNavigationController.swift in Sources */,
@@ -988,10 +1021,12 @@
 				13B6C6002443B136006BE51D /* ListsController.swift in Sources */,
 				25C0832A24458854001578D1 /* Navigator.swift in Sources */,
 				25E0DF6C245783630061C293 /* OnboardingController.swift in Sources */,
+				250DAB8C24593425006C8895 /* ListCell.swift in Sources */,
 				25C0833924458A9F001578D1 /* ListsNavigator.swift in Sources */,
 				25C0834624458D66001578D1 /* SoundEffects.swift in Sources */,
 				25C0831E24458496001578D1 /* UserDefaults.swift in Sources */,
 				25E0DF6D245783630061C293 /* OnboardingNavigator.swift in Sources */,
+				250DAB8824592E9B006C8895 /* IconModel.swift in Sources */,
 				25C08315244583B8001578D1 /* Vibrator.swift in Sources */,
 				13B6C5FC2443B136006BE51D /* AppDelegate.swift in Sources */,
 				25E0DF7C2457E5610061C293 /* ObservableExtensions.swift in Sources */,
@@ -1001,6 +1036,7 @@
 				25C0833B24458AC0001578D1 /* ListsViewModel.swift in Sources */,
 				25C08333244588C4001578D1 /* SplashNavigator.swift in Sources */,
 				25E0DF832457F6D20061C293 /* SettingViewModel.swift in Sources */,
+				250DAB8F24593437006C8895 /* ListItemViewModel.swift in Sources */,
 				25E0DF70245783630061C293 /* OboardingItemViewModel.swift in Sources */,
 				25C08324244585D8001578D1 /* Application.swift in Sources */,
 				25E0DF742457D9BD0061C293 /* UIViewControllerExtensions.swift in Sources */,
