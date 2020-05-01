@@ -30,7 +30,6 @@
 "onboarding_description4" = "Start creating a list by + button.";
 
 // LISTS
-"lists_add_coachmark" = "Start creating a list by click on + button";
-
+"lists_empty_coachmark" = "Start creating a list by\npress on + button";
 // SETTING
 "setting_navigation_title" = "Setting";

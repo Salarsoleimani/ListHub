@@ -10,9 +10,7 @@ import UIKit
 import BEKListKit
 
 extension OnboardingController {
-  func setupUI() {
-    navigationController?.isNavigationBarHidden = true
-    
+  func setupUI() {    
     setupCollectionView()
     view.backgroundColor = ListHubColor.background.value
   }

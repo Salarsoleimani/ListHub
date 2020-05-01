@@ -26,12 +26,14 @@ class ListCell: UICollectionViewCell {
 // MARK:- Functions
   private func setupUI() {
     containerView.layer.cornerRadius = Constants.Radius.listCellRadius
-    let titleFont = ListHubFont(.installed(.montserrat, .bold), size: .standard(.h2)).instance
-    let quantityFont = ListHubFont(.installed(.montserrat, .regular), size: .standard(.h4)).instance
-    titleLabel.font = titleFont
-    quantityLabel.font = quantityFont
+    containerView.backgroundColor = ListHubColor.listCellBackground.value
+
+    titleLabel.font = ListHubFonts.listCellTitle
     titleLabel.numberOfLines = 2
-    [titleLabel, quantityLabel].forEach{$0?.textColor = ListHubColor.text.value}
+    titleLabel.textColor = ListHubColor.listCellTitle.value
+    
+    quantityLabel.font = ListHubFonts.listCellDescription
+    quantityLabel.textColor = ListHubColor.listCellDescription.value
   }
 }
 // MARK:- BEKListKit

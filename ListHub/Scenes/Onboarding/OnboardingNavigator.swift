@@ -10,6 +10,7 @@ final class OnboardingNavigator: Navigator {
   func setup() {
     let vc = OnboardingController.initFromNib()
     vc.viewModel = OnboardingViewModel(navigator: self)
+    navigationController.isNavigationBarHidden = true
     navigationController.pushViewController(vc, animated: true)
     //AnalyticLogProvider.logNavigator(name: NSStringFromClass(type(of: self)), functionName: "setup")
   }

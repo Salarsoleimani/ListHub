@@ -23,12 +23,9 @@ class OnboardingCell: UICollectionViewCell {
   }
 // MARK:- Functions
   private func setupUI() {
-    let titleFont = ListHubFont(.installed(.montserrat, .bold), size: .standard(.h2)).instance
-    let descFont = ListHubFont(.installed(.montserrat, .regular), size: .standard(.h4)).instance
-    titleLabel.font = titleFont
-    descriptionLabel.font = descFont
+    titleLabel.font = ListHubFonts.onboardingTitle
+    descriptionLabel.font = ListHubFonts.onboardingDescription
     descriptionLabel.numberOfLines = 0
-    [titleLabel, descriptionLabel].forEach{$0?.textColor = ListHubColor.text.value}
   }
 }
 // MARK:- BEKListKit

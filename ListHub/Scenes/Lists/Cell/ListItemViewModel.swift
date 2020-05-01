@@ -21,7 +21,9 @@ struct ListItemViewModel {
     self.title = model.title
     self.iconImage = UIImage(named: "ic_\(model.iconId)") ?? UIImage()
     self.iconColor = UIColor(hex: model.iconColor)
-    self.quantity = "\(model.itemQuantity) items"
+    let quantity = model.itemQuantity
+    let itemLabel = quantity > 1 ? "items" : "item"
+    self.quantity = "\(quantity) \(itemLabel)"
   }
 }
 

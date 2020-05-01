@@ -7,7 +7,11 @@ end
 target 'ListHub' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  
+  # UI
+  pod 'AMScrollingNavbar'
+  pod 'IQKeyboardManagerSwift'
+  pod 'lottie-ios'
+
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Hero'
@@ -16,8 +20,6 @@ target 'ListHub' do
   pod 'SDWebImage'
   pod "SwiftRater"
   pod 'Siren'
-  pod 'IQKeyboardManagerSwift'
-  pod 'Instructions'
   
   # Pods for Domain
   target 'Domain' do

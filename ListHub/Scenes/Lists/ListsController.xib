@@ -9,6 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListsController" customModule="ListHub" customModuleProvider="target">
             <connections>
+                <outlet property="lottieAnimationView" destination="b6A-Sc-dJl" id="Frj-Lj-eWa"/>
+                <outlet property="lottieContainerView" destination="NYN-gK-uS4" id="R2c-2c-YFg"/>
+                <outlet property="lottieLabel" destination="DP3-tD-whb" id="zIw-go-Mzr"/>
                 <outlet property="myListsCollectionView" destination="509-SP-VjA" id="d61-6V-XeN"/>
                 <outlet property="view" destination="iN0-l3-epB" id="HEh-Vj-XPV"/>
             </connections>
@@ -18,9 +21,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="509-SP-VjA" customClass="BEKMultiCellCollection" customModule="BEKListKit">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="509-SP-VjA" customClass="BEKMultiCellCollection" customModule="BEKListKit">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vib-WU-Zlx">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -28,16 +31,49 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYN-gK-uS4">
+                    <rect key="frame" x="16" y="44" width="382" height="440"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DP3-tD-whb">
+                            <rect key="frame" x="16" y="321" width="350" height="41"/>
+                            <string key="text">Start clreating a list by 
+press on the + button.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6A-Sc-dJl">
+                            <rect key="frame" x="53.5" y="30" width="275" height="275"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="b6A-Sc-dJl" secondAttribute="height" multiplier="1:1" id="7Fw-A9-bzu"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="DP3-tD-whb" secondAttribute="trailing" constant="16" id="43b-oP-rU4"/>
+                        <constraint firstAttribute="height" secondItem="b6A-Sc-dJl" secondAttribute="height" multiplier="1.6" id="HXg-An-GaB"/>
+                        <constraint firstItem="DP3-tD-whb" firstAttribute="leading" secondItem="NYN-gK-uS4" secondAttribute="leading" constant="16" id="IeK-au-43o"/>
+                        <constraint firstItem="b6A-Sc-dJl" firstAttribute="centerX" secondItem="NYN-gK-uS4" secondAttribute="centerX" id="O9g-4a-SFd"/>
+                        <constraint firstItem="DP3-tD-whb" firstAttribute="top" secondItem="b6A-Sc-dJl" secondAttribute="bottom" constant="16" id="bGc-Je-25s"/>
+                        <constraint firstItem="b6A-Sc-dJl" firstAttribute="top" secondItem="NYN-gK-uS4" secondAttribute="top" constant="30" id="gzZ-NC-XV1"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="509-SP-VjA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0O9-Aw-k63"/>
+                <constraint firstItem="b6A-Sc-dJl" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.664251" id="0Xf-mp-P3l"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NYN-gK-uS4" secondAttribute="trailing" constant="16" id="GoA-hI-iTs"/>
                 <constraint firstItem="509-SP-VjA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Q6O-Z4-jWk"/>
+                <constraint firstItem="NYN-gK-uS4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="aTB-2T-2cf"/>
+                <constraint firstItem="509-SP-VjA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cUU-tr-U6h"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="509-SP-VjA" secondAttribute="bottom" id="f0r-4z-mhT"/>
+                <constraint firstItem="NYN-gK-uS4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="lRs-Zs-ppM"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="509-SP-VjA" secondAttribute="trailing" id="oWm-Kt-Qo5"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="139" y="149"/>
+            <point key="canvasLocation" x="137.68115942028987" y="148.66071428571428"/>
         </view>
     </objects>
 </document>

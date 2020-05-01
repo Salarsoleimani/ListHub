@@ -1,8 +1,9 @@
 PODS:
+  - AMScrollingNavbar (5.6.1)
   - BEKListKit (1.0.3)
   - Hero (1.5.0)
-  - Instructions (1.4.0)
   - IQKeyboardManagerSwift (6.5.5)
+  - lottie-ios (3.1.8)
   - QuickDB (2.0.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
@@ -18,10 +19,11 @@ PODS:
   - SwiftRater (1.8.0)
 
 DEPENDENCIES:
+  - AMScrollingNavbar
   - BEKListKit
   - Hero
-  - Instructions
   - IQKeyboardManagerSwift
+  - lottie-ios
   - QuickDB (from `https://github.com/behrad-kzm/QuickDB`)
   - RxCocoa
   - RxSwift
@@ -32,10 +34,11 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AMScrollingNavbar
     - BEKListKit
     - Hero
-    - Instructions
     - IQKeyboardManagerSwift
+    - lottie-ios
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -51,17 +54,18 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   QuickDB:
-    :commit: 83e31c413a396ea31af10b9f0caa3705111be5f3
+    :commit: 9f9162c064ca788b38eb8ddda5b48795e9161864
     :git: https://github.com/behrad-kzm/QuickDB
   Stellar:
     :commit: 6c192427621f8b52f3b155d0088e1eabd156abe0
     :git: https://github.com/AugustRush/Stellar.git
 
 SPEC CHECKSUMS:
+  AMScrollingNavbar: 602dd7a26efd0edb40d67ec20b5ee80b9f573bbb
   BEKListKit: eced55022c40444e55975752a03595751286e123
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
-  Instructions: 8986424854e99640665a82cfe56852c52a0c5bdf
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   QuickDB: d7bb43c01b664fb935963f1756da5f42c9734b54
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
@@ -71,6 +75,6 @@ SPEC CHECKSUMS:
   Stellar: df980becd194eeb62d623af097582da0ef2219b9
   SwiftRater: 6094fa6e9b3866ff8beca0a871b4b5f9ab896a6d
 
-PODFILE CHECKSUM: 311f657b64daa342832f2822fa185a5bc944c78e
+PODFILE CHECKSUM: b272c5ca17990d4ee47947a49256207a7a6552f3
 
 COCOAPODS: 1.9.0

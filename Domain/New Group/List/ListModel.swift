@@ -14,7 +14,7 @@ public struct ListModel: QuickIndexable {
   public let description: String
   public let iconId: Int
   public let iconColor: Int
-  public let itemQuantity: Int
+  public var itemQuantity: Int
   //public let components: [ComponentType]?
   public init(title: String, description: String = "", iconId: Int, iconColor: Int) {
     self.uid = UUID()

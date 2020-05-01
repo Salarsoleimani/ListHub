@@ -12,6 +12,7 @@ final class ListsNavigator: Navigator {
   func setup() {
     let vc = ListsController.initFromNib()
     vc.viewModel = ListsViewModel(navigator: self, engine: appEngine)
+    navigationController.isNavigationBarHidden = false
     navigationController.setViewControllers([vc], animated: true)
     //AnalyticLogProvider.logNavigator(name: NSStringFromClass(type(of: self)), functionName: "setup")
   }
