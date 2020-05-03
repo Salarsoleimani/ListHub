@@ -17,6 +17,8 @@ import Foundation
 /// ComponentType
 
 public enum ComponentType {
+	
+	//MARK: - Inputs
 	public enum Inputs {
 		case simpleString(ComponentElements.SimpleString.Input)
 		case phoneNumber(ComponentElements.PhoneNumber.Input)
@@ -35,9 +37,24 @@ public enum ComponentType {
 			throw DecodingError.typeMismatch(ComponentType.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for EventType"))
 		}
 	}
-}
+	
+	//MARK: - Outputs
+	public enum Outputs {
+		case simpleString(ComponentElements.SimpleString.Output)
+		case phoneNumber(ComponentElements.PhoneNumber.Output)
+		public init(from decoder: Decoder) throws {
+			let container = try decoder.singleValueContainer()
 
-public protocol ComponentTypeProtocol {
-	associatedtype Input
-	associatedtype Output
+			if let element = try? container.decode(ComponentElements.SimpleString.Output.self) {
+				self = .simpleString(element)
+				return
+			}
+			
+			if let element = try? container.decode(ComponentElements.PhoneNumber.Output.self) {
+				self = .phoneNumber(element)
+				return
+			}
+			throw DecodingError.typeMismatch(ComponentType.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for EventType"))
+		}
+	}
 }

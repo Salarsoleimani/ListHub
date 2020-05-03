@@ -10,8 +10,7 @@ import Foundation
 import Domain
 struct test {
 	func tes(){
-		let element = ComponentElements.SimpleString.Input(title: "ali")
-		let type = ComponentType.Inputs.simpleString(element)
+		let type = ComponentElements.SimpleString.Input(title: "ali").asType()
 		if let vm: PhoneNumberInputViewModel = try? type.asViewModel(){
 			
 		}

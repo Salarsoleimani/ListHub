@@ -19,3 +19,12 @@ extension ComponentType.Inputs {
 	}
 }
 
+extension ComponentType.Outputs {
+	func asViewModel() throws -> PhoneNumberOutputViewModel {
+		if case let ComponentType.Outputs.phoneNumber(item) = self {
+			return PhoneNumberOutputViewModel(titleName: item.title, inputValue: item.content)
+		}
+		let error = NSError().compose(domain: "ComponentType.Inputs.asViewModel()", code: -1, message: "Can't find simpleString type")
+		throw error
+	}
+}

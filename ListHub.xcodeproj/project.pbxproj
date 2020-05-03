@@ -10,7 +10,6 @@
 		1308C0B1245C3A920095364A /* SimpleString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308C0B0245C3A920095364A /* SimpleString.swift */; };
 		1308C0B3245C42260095364A /* ComponetElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308C0B2245C42260095364A /* ComponetElements.swift */; };
 		139E4B0C245EAA300048FD4B /* ComponentType+SimpleString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B0B245EAA300048FD4B /* ComponentType+SimpleString.swift */; };
-		139E4B0F245EAA570048FD4B /* ComponentElements+SimpleString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B0E245EAA570048FD4B /* ComponentElements+SimpleString.swift */; };
 		139E4B11245EABCF0048FD4B /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B10245EABCF0048FD4B /* PhoneNumber.swift */; };
 		139E4B19245EAC970048FD4B /* PhoneNumberInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B17245EAC970048FD4B /* PhoneNumberInputCell.swift */; };
 		139E4B1A245EAC970048FD4B /* PhoneNumberInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 139E4B18245EAC970048FD4B /* PhoneNumberInputCell.xib */; };
@@ -19,6 +18,7 @@
 		139E4B22245EACDD0048FD4B /* PhoneNumberOutputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B20245EACDD0048FD4B /* PhoneNumberOutputCell.swift */; };
 		139E4B23245EACDD0048FD4B /* PhoneNumberOutputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 139E4B21245EACDD0048FD4B /* PhoneNumberOutputCell.xib */; };
 		139E4B25245EACF40048FD4B /* ComponentType+PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B24245EACF40048FD4B /* ComponentType+PhoneNumber.swift */; };
+		139E4B27245EBF010048FD4B /* ComponentTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B26245EBF010048FD4B /* ComponentTypeProtocol.swift */; };
 		13B6C5FC2443B136006BE51D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6C5FB2443B136006BE51D /* AppDelegate.swift */; };
 		13B6C5FE2443B136006BE51D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6C5FD2443B136006BE51D /* SceneDelegate.swift */; };
 		13B6C6002443B136006BE51D /* ListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6C5FF2443B136006BE51D /* ListsController.swift */; };
@@ -185,7 +185,6 @@
 		1308C0B0245C3A920095364A /* SimpleString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleString.swift; sourceTree = "<group>"; };
 		1308C0B2245C42260095364A /* ComponetElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponetElements.swift; sourceTree = "<group>"; };
 		139E4B0B245EAA300048FD4B /* ComponentType+SimpleString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentType+SimpleString.swift"; sourceTree = "<group>"; };
-		139E4B0E245EAA570048FD4B /* ComponentElements+SimpleString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentElements+SimpleString.swift"; sourceTree = "<group>"; };
 		139E4B10245EABCF0048FD4B /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		139E4B17245EAC970048FD4B /* PhoneNumberInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberInputCell.swift; sourceTree = "<group>"; };
 		139E4B18245EAC970048FD4B /* PhoneNumberInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberInputCell.xib; sourceTree = "<group>"; };
@@ -194,6 +193,7 @@
 		139E4B20245EACDD0048FD4B /* PhoneNumberOutputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberOutputCell.swift; sourceTree = "<group>"; };
 		139E4B21245EACDD0048FD4B /* PhoneNumberOutputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberOutputCell.xib; sourceTree = "<group>"; };
 		139E4B24245EACF40048FD4B /* ComponentType+PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentType+PhoneNumber.swift"; sourceTree = "<group>"; };
+		139E4B26245EBF010048FD4B /* ComponentTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentTypeProtocol.swift; sourceTree = "<group>"; };
 		13B6C5F82443B136006BE51D /* ListHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B6C5FB2443B136006BE51D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13B6C5FD2443B136006BE51D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -360,6 +360,7 @@
 				13CDB252245D73A900749829 /* Items */,
 				25C0830424458091001578D1 /* ComponentType.swift */,
 				1308C0B2245C42260095364A /* ComponetElements.swift */,
+				139E4B26245EBF010048FD4B /* ComponentTypeProtocol.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -368,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				139E4B0B245EAA300048FD4B /* ComponentType+SimpleString.swift */,
-				139E4B0E245EAA570048FD4B /* ComponentElements+SimpleString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1226,7 +1226,6 @@
 				13CDB23E245D66CE00749829 /* SimpleStringInputCell.swift in Sources */,
 				13CDB254245D759E00749829 /* Error+Composer.swift in Sources */,
 				13CDB256245D918300749829 /* ComponentType+Composer.swift in Sources */,
-				139E4B0F245EAA570048FD4B /* ComponentElements+SimpleString.swift in Sources */,
 				25E0DF6D245783630061C293 /* OnboardingNavigator.swift in Sources */,
 				250DAB8824592E9B006C8895 /* IconModel.swift in Sources */,
 				25C08315244583B8001578D1 /* Vibrator.swift in Sources */,
@@ -1297,6 +1296,7 @@
 				25C0830324458071001578D1 /* ListModel.swift in Sources */,
 				250DAB7C24592179006C8895 /* EngineManagerProtocol.swift in Sources */,
 				25C082FB24457FCF001578D1 /* DataBaseProtocol.swift in Sources */,
+				139E4B27245EBF010048FD4B /* ComponentTypeProtocol.swift in Sources */,
 				25E0DF782457DF000061C293 /* ViewModelType.swift in Sources */,
 				25C0830524458091001578D1 /* ComponentType.swift in Sources */,
 				1308C0B3245C42260095364A /* ComponetElements.swift in Sources */,

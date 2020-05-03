@@ -7,3 +7,7 @@
 //
 
 import Foundation
+struct PhoneNumberOutputViewModel {
+	var titleName: String
+	var inputValue: String
+}
