@@ -9,6 +9,9 @@
 import Foundation
 
 struct ListHubFonts {
+  static let h2Bold = SSFont(.installed(.montserrat, .bold), size: .standard(.h1)).instance
+  static let h4Regular = SSFont(.installed(.montserrat, .regular), size: .standard(.h4)).instance
+
   // Navigation
   static let navigationLargeTitle = SSFont(.installed(.montserrat, .bold), size: .standard(.h1)).instance
   // Onboarding

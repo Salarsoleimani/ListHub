@@ -13,6 +13,8 @@ final class ListsViewModel: ViewModelType {
 // MARK:- Constants
   private let navigator: ListsNavigator
   private let engine: EngineManagerProtocol
+  let shouldShowList = BehaviorRelay<Bool>(value: true)
+
 // MARK:- Initialization
   init(navigator: ListsNavigator, engine: EngineManagerProtocol) {
     self.navigator = navigator
@@ -38,14 +40,13 @@ final class ListsViewModel: ViewModelType {
     }
     
     let rxLists = BehaviorRelay<[ListModel]>(value: [ListModel]())
-    let showList = BehaviorRelay<Bool>(value: true)
     
-    engine.getLists { [showList, rxLists] (lists) in
+    engine.getLists { [shouldShowList, rxLists] (lists) in
       rxLists.accept(lists)
-      lists.count == 0 ? showList.accept(false) : showList.accept(true)
+      lists.count == 0 ? shouldShowList.accept(false) : shouldShowList.accept(true)
     }
     
-    return Output(addListTrigger: addListTrigger, openSettingTrigger: openSettingTrigger, lists: rxLists, showList: showList.asDriver())
+    return Output(addListTrigger: addListTrigger, openSettingTrigger: openSettingTrigger, lists: rxLists, showList: shouldShowList.asDriver())
   }
 }
 // MARK:- Inputs & Outputs

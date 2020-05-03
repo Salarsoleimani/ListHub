@@ -3,6 +3,7 @@ ${BUILT_PRODUCTS_DIR}/AMScrollingNavbar/AMScrollingNavbar.framework
 ${BUILT_PRODUCTS_DIR}/BEKListKit/BEKListKit.framework
 ${BUILT_PRODUCTS_DIR}/Hero/Hero.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
+${BUILT_PRODUCTS_DIR}/MaterialShowcase/MaterialShowcase.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
 ${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
 ${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

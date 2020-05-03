@@ -11,8 +11,11 @@ target 'ListHub' do
   pod 'AMScrollingNavbar'
   pod 'IQKeyboardManagerSwift'
   pod 'lottie-ios'
+<<<<<<< HEAD
+=======
   pod 'MaterialShowcase'
   
+>>>>>>> 96cceb7b91698e8a6f6cf5999b3cfe0bf2bbb17a
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Hero'
