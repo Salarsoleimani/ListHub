@@ -22,6 +22,7 @@ public struct ListModel: QuickIndexable {
     self.description = description
     self.itemQuantity = 1
     self.iconId = iconId
+//		let ali = Com
     self.iconColor = iconColor
   }
 }

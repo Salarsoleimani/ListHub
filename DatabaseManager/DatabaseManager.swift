@@ -18,15 +18,15 @@ final public class DBManager: DatabaseManagerProtocol {
   }
   // MARK:- List
   public func get(Lists response: ([ListModel]) -> Void) {
-    quickDB.getAll(TagsMatchedWithItems: [Constants.Tags.list], LatestObjects: { (items: [ListModel]) in
-      response(items)
-    }) { (error) in
-      print("error on getting all lists: \(error)")
-    }
+//    quickDB.getAll(TagsMatchedWithItems: [Constants.Tags.list], LatestObjects: { (items: [ListModel]) in
+//      response(items)
+//    }) { (error) in
+//      print("error on getting all lists: \(error)")
+//    }
   }
 
   public func add(List list: ListModel, response: ((Bool) -> Void)?) {
-    quickDB.insert(model: list, withTag: Constants.Tags.list, completion: response)
+//    quickDB.insert(model: list, withTag: Constants.Tags.list, completion: response)
   }
   
   public func delete(List id: UUID, response: @escaping (Bool) -> Void) {

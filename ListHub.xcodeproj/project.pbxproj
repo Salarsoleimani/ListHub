@@ -7,12 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1308C0B1245C3A920095364A /* SimpleString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308C0B0245C3A920095364A /* SimpleString.swift */; };
+		1308C0B3245C42260095364A /* ComponetElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308C0B2245C42260095364A /* ComponetElements.swift */; };
+		139E4B0C245EAA300048FD4B /* ComponentType+SimpleString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B0B245EAA300048FD4B /* ComponentType+SimpleString.swift */; };
+		139E4B0F245EAA570048FD4B /* ComponentElements+SimpleString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B0E245EAA570048FD4B /* ComponentElements+SimpleString.swift */; };
+		139E4B11245EABCF0048FD4B /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B10245EABCF0048FD4B /* PhoneNumber.swift */; };
+		139E4B19245EAC970048FD4B /* PhoneNumberInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B17245EAC970048FD4B /* PhoneNumberInputCell.swift */; };
+		139E4B1A245EAC970048FD4B /* PhoneNumberInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 139E4B18245EAC970048FD4B /* PhoneNumberInputCell.xib */; };
+		139E4B1C245EACA60048FD4B /* PhoneNumberInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B1B245EACA60048FD4B /* PhoneNumberInputViewModel.swift */; };
+		139E4B1F245EACCB0048FD4B /* PhoneNumberOutputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B1E245EACCB0048FD4B /* PhoneNumberOutputViewModel.swift */; };
+		139E4B22245EACDD0048FD4B /* PhoneNumberOutputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B20245EACDD0048FD4B /* PhoneNumberOutputCell.swift */; };
+		139E4B23245EACDD0048FD4B /* PhoneNumberOutputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 139E4B21245EACDD0048FD4B /* PhoneNumberOutputCell.xib */; };
+		139E4B25245EACF40048FD4B /* ComponentType+PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B24245EACF40048FD4B /* ComponentType+PhoneNumber.swift */; };
 		13B6C5FC2443B136006BE51D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6C5FB2443B136006BE51D /* AppDelegate.swift */; };
 		13B6C5FE2443B136006BE51D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6C5FD2443B136006BE51D /* SceneDelegate.swift */; };
 		13B6C6002443B136006BE51D /* ListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6C5FF2443B136006BE51D /* ListsController.swift */; };
 		13B6C6062443B136006BE51D /* ListHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13B6C6042443B136006BE51D /* ListHub.xcdatamodeld */; };
 		13B6C6082443B14E006BE51D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B6C6072443B14E006BE51D /* Assets.xcassets */; };
 		13B6C60B2443B14E006BE51D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B6C6092443B14E006BE51D /* LaunchScreen.storyboard */; };
+		13CDB23E245D66CE00749829 /* SimpleStringInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDB23C245D66CE00749829 /* SimpleStringInputCell.swift */; };
+		13CDB23F245D66CE00749829 /* SimpleStringInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13CDB23D245D66CE00749829 /* SimpleStringInputCell.xib */; };
+		13CDB243245D695500749829 /* SimpleStringInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDB242245D695500749829 /* SimpleStringInputViewModel.swift */; };
+		13CDB247245D6B3D00749829 /* SimpleStringOutputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDB245245D6B3D00749829 /* SimpleStringOutputCell.swift */; };
+		13CDB248245D6B3D00749829 /* SimpleStringOutputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13CDB246245D6B3D00749829 /* SimpleStringOutputCell.xib */; };
+		13CDB24A245D6C5700749829 /* SimpleStringOutputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDB249245D6C5700749829 /* SimpleStringOutputViewModel.swift */; };
+		13CDB254245D759E00749829 /* Error+Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDB253245D759E00749829 /* Error+Composer.swift */; };
+		13CDB256245D918300749829 /* ComponentType+Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDB255245D918300749829 /* ComponentType+Composer.swift */; };
 		250DAB362458F254006C8895 /* DatabaseManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250DAB2D2458F254006C8895 /* DatabaseManager.framework */; };
 		250DAB3D2458F254006C8895 /* DatabaseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB3C2458F254006C8895 /* DatabaseManagerTests.swift */; };
 		250DAB3F2458F254006C8895 /* DatabaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 250DAB2F2458F254006C8895 /* DatabaseManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,7 +49,6 @@
 		250DAB75245901D1006C8895 /* DatabaseManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250DAB2D2458F254006C8895 /* DatabaseManager.framework */; };
 		250DAB7724591C05006C8895 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB7624591C05006C8895 /* DatabaseManager.swift */; };
 		250DAB7C24592179006C8895 /* EngineManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB7B24592179006C8895 /* EngineManagerProtocol.swift */; };
-		250DAB7E24592206006C8895 /* ListTemplateTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB7D24592206006C8895 /* ListTemplateTypes.swift */; };
 		250DAB80245929E1006C8895 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB7F245929E1006C8895 /* Constants.swift */; };
 		250DAB8324592DA7006C8895 /* Icons.json in Resources */ = {isa = PBXBuildFile; fileRef = 250DAB8224592DA7006C8895 /* Icons.json */; };
 		250DAB8624592E5A006C8895 /* SSMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB8524592E5A006C8895 /* SSMocker.swift */; };
@@ -163,6 +182,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1308C0B0245C3A920095364A /* SimpleString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleString.swift; sourceTree = "<group>"; };
+		1308C0B2245C42260095364A /* ComponetElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponetElements.swift; sourceTree = "<group>"; };
+		139E4B0B245EAA300048FD4B /* ComponentType+SimpleString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentType+SimpleString.swift"; sourceTree = "<group>"; };
+		139E4B0E245EAA570048FD4B /* ComponentElements+SimpleString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentElements+SimpleString.swift"; sourceTree = "<group>"; };
+		139E4B10245EABCF0048FD4B /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		139E4B17245EAC970048FD4B /* PhoneNumberInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberInputCell.swift; sourceTree = "<group>"; };
+		139E4B18245EAC970048FD4B /* PhoneNumberInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberInputCell.xib; sourceTree = "<group>"; };
+		139E4B1B245EACA60048FD4B /* PhoneNumberInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberInputViewModel.swift; sourceTree = "<group>"; };
+		139E4B1E245EACCB0048FD4B /* PhoneNumberOutputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberOutputViewModel.swift; sourceTree = "<group>"; };
+		139E4B20245EACDD0048FD4B /* PhoneNumberOutputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberOutputCell.swift; sourceTree = "<group>"; };
+		139E4B21245EACDD0048FD4B /* PhoneNumberOutputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberOutputCell.xib; sourceTree = "<group>"; };
+		139E4B24245EACF40048FD4B /* ComponentType+PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentType+PhoneNumber.swift"; sourceTree = "<group>"; };
 		13B6C5F82443B136006BE51D /* ListHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B6C5FB2443B136006BE51D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13B6C5FD2443B136006BE51D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +202,14 @@
 		13B6C6072443B14E006BE51D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13B6C60A2443B14E006BE51D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13B6C60C2443B14E006BE51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13CDB23C245D66CE00749829 /* SimpleStringInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStringInputCell.swift; sourceTree = "<group>"; };
+		13CDB23D245D66CE00749829 /* SimpleStringInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleStringInputCell.xib; sourceTree = "<group>"; };
+		13CDB242245D695500749829 /* SimpleStringInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStringInputViewModel.swift; sourceTree = "<group>"; };
+		13CDB245245D6B3D00749829 /* SimpleStringOutputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStringOutputCell.swift; sourceTree = "<group>"; };
+		13CDB246245D6B3D00749829 /* SimpleStringOutputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleStringOutputCell.xib; sourceTree = "<group>"; };
+		13CDB249245D6C5700749829 /* SimpleStringOutputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStringOutputViewModel.swift; sourceTree = "<group>"; };
+		13CDB253245D759E00749829 /* Error+Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Composer.swift"; sourceTree = "<group>"; };
+		13CDB255245D918300749829 /* ComponentType+Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentType+Composer.swift"; sourceTree = "<group>"; };
 		250DAB2D2458F254006C8895 /* DatabaseManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DatabaseManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		250DAB2F2458F254006C8895 /* DatabaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
 		250DAB302458F254006C8895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -186,7 +225,6 @@
 		250DAB72245901B8006C8895 /* AppEngineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEngineManager.swift; sourceTree = "<group>"; };
 		250DAB7624591C05006C8895 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		250DAB7B24592179006C8895 /* EngineManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineManagerProtocol.swift; sourceTree = "<group>"; };
-		250DAB7D24592206006C8895 /* ListTemplateTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTemplateTypes.swift; sourceTree = "<group>"; };
 		250DAB7F245929E1006C8895 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		250DAB8224592DA7006C8895 /* Icons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Icons.json; sourceTree = "<group>"; };
 		250DAB8524592E5A006C8895 /* SSMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSMocker.swift; sourceTree = "<group>"; };
@@ -203,7 +241,7 @@
 		25C082F024457F67001578D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25C082FA24457FCE001578D1 /* DataBaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseProtocol.swift; sourceTree = "<group>"; };
 		25C0830224458071001578D1 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
-		25C0830424458091001578D1 /* ComponentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentType.swift; sourceTree = "<group>"; };
+		25C0830424458091001578D1 /* ComponentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComponentType.swift; path = ../ComponentType.swift; sourceTree = "<group>"; };
 		25C0830B2445817B001578D1 /* ListHubColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHubColor.swift; sourceTree = "<group>"; };
 		25C0830E24458242001578D1 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		25C0831224458394001578D1 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
@@ -316,6 +354,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1308C0AD245C3A1A0095364A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				13CDB252245D73A900749829 /* Items */,
+				25C0830424458091001578D1 /* ComponentType.swift */,
+				1308C0B2245C42260095364A /* ComponetElements.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		139E4B0D245EAA3B0048FD4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				139E4B0B245EAA300048FD4B /* ComponentType+SimpleString.swift */,
+				139E4B0E245EAA570048FD4B /* ComponentElements+SimpleString.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		139E4B12245EABE80048FD4B /* PhoneNumber */ = {
+			isa = PBXGroup;
+			children = (
+				139E4B15245EAC4F0048FD4B /* Extensions */,
+				139E4B14245EAC490048FD4B /* Output */,
+				139E4B13245EAC3D0048FD4B /* Input */,
+			);
+			path = PhoneNumber;
+			sourceTree = "<group>";
+		};
+		139E4B13245EAC3D0048FD4B /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				139E4B16245EAC7D0048FD4B /* VM */,
+				139E4B17245EAC970048FD4B /* PhoneNumberInputCell.swift */,
+				139E4B18245EAC970048FD4B /* PhoneNumberInputCell.xib */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		139E4B14245EAC490048FD4B /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				139E4B1D245EACAA0048FD4B /* VM */,
+				139E4B20245EACDD0048FD4B /* PhoneNumberOutputCell.swift */,
+				139E4B21245EACDD0048FD4B /* PhoneNumberOutputCell.xib */,
+			);
+			path = Output;
+			sourceTree = "<group>";
+		};
+		139E4B15245EAC4F0048FD4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				139E4B24245EACF40048FD4B /* ComponentType+PhoneNumber.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		139E4B16245EAC7D0048FD4B /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				139E4B1B245EACA60048FD4B /* PhoneNumberInputViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		139E4B1D245EACAA0048FD4B /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				139E4B1E245EACCB0048FD4B /* PhoneNumberOutputViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
 		13B6C5EF2443B136006BE51D = {
 			isa = PBXGroup;
 			children = (
@@ -351,11 +462,77 @@
 				25C08316244583D4001578D1 /* Useful */,
 				25C0831124458388001578D1 /* Utils */,
 				25C083092445814A001578D1 /* Resources */,
+				13CDB238245D653D00749829 /* LHComponentViews */,
 				25C083072445812F001578D1 /* Scenes */,
 				25C08306244580B1001578D1 /* Configurations */,
 				13B6C6042443B136006BE51D /* ListHub.xcdatamodeld */,
 			);
 			path = ListHub;
+			sourceTree = "<group>";
+		};
+		13CDB238245D653D00749829 /* LHComponentViews */ = {
+			isa = PBXGroup;
+			children = (
+				139E4B12245EABE80048FD4B /* PhoneNumber */,
+				13CDB239245D65A100749829 /* SimpleString */,
+				13CDB255245D918300749829 /* ComponentType+Composer.swift */,
+			);
+			path = LHComponentViews;
+			sourceTree = "<group>";
+		};
+		13CDB239245D65A100749829 /* SimpleString */ = {
+			isa = PBXGroup;
+			children = (
+				139E4B0D245EAA3B0048FD4B /* Extensions */,
+				13CDB23B245D663800749829 /* Output */,
+				13CDB23A245D663200749829 /* Input */,
+			);
+			path = SimpleString;
+			sourceTree = "<group>";
+		};
+		13CDB23A245D663200749829 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				13CDB240245D693600749829 /* VM */,
+				13CDB23C245D66CE00749829 /* SimpleStringInputCell.swift */,
+				13CDB23D245D66CE00749829 /* SimpleStringInputCell.xib */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		13CDB23B245D663800749829 /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				13CDB244245D6B1400749829 /* VM */,
+				13CDB245245D6B3D00749829 /* SimpleStringOutputCell.swift */,
+				13CDB246245D6B3D00749829 /* SimpleStringOutputCell.xib */,
+			);
+			path = Output;
+			sourceTree = "<group>";
+		};
+		13CDB240245D693600749829 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				13CDB242245D695500749829 /* SimpleStringInputViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		13CDB244245D6B1400749829 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				13CDB249245D6C5700749829 /* SimpleStringOutputViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		13CDB252245D73A900749829 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				1308C0B0245C3A920095364A /* SimpleString.swift */,
+				139E4B10245EABCF0048FD4B /* PhoneNumber.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 		250DAB2E2458F254006C8895 /* DatabaseManager */ = {
@@ -464,8 +641,7 @@
 			children = (
 				25C0830124458064001578D1 /* List */,
 			);
-			name = Entities;
-			path = "New Group";
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		25C082FD24458007001578D1 /* Protocols */ = {
@@ -481,9 +657,8 @@
 		25C0830124458064001578D1 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				1308C0AD245C3A1A0095364A /* Components */,
 				25C0830224458071001578D1 /* ListModel.swift */,
-				25C0830424458091001578D1 /* ComponentType.swift */,
-				250DAB7D24592206006C8895 /* ListTemplateTypes.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -554,6 +729,7 @@
 				25C0830E24458242001578D1 /* UIColorExtensions.swift */,
 				25E0DF732457D9BD0061C293 /* UIViewControllerExtensions.swift */,
 				25E0DF7B2457E5610061C293 /* ObservableExtensions.swift */,
+				13CDB253245D759E00749829 /* Error+Composer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -874,9 +1050,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13CDB248245D6B3D00749829 /* SimpleStringOutputCell.xib in Resources */,
 				250DAB8324592DA7006C8895 /* Icons.json in Resources */,
 				25C0834F24458DB8001578D1 /* Montserrat-Regular.ttf in Resources */,
+				139E4B23245EACDD0048FD4B /* PhoneNumberOutputCell.xib in Resources */,
 				13B6C60B2443B14E006BE51D /* LaunchScreen.storyboard in Resources */,
+				139E4B1A245EAC970048FD4B /* PhoneNumberInputCell.xib in Resources */,
 				25C08332244588C4001578D1 /* SplashViewController.xib in Resources */,
 				13B6C6082443B14E006BE51D /* Assets.xcassets in Resources */,
 				25E0DF872457F6E50061C293 /* SettingController.xib in Resources */,
@@ -885,6 +1064,7 @@
 				25C0833724458A86001578D1 /* ListsController.xib in Resources */,
 				25C0834924458D8B001578D1 /* SplashSound.mp3 in Resources */,
 				25E0DF6E245783630061C293 /* OnboardingCell.xib in Resources */,
+				13CDB23F245D66CE00749829 /* SimpleStringInputCell.xib in Resources */,
 				25E0DF71245783630061C293 /* OnboardingController.xib in Resources */,
 				25C0834A24458D8B001578D1 /* ErrorSound.mp3 in Resources */,
 				2551B726245BC6E000BB3689 /* Empty.json in Resources */,
@@ -1020,12 +1200,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13CDB243245D695500749829 /* SimpleStringInputViewModel.swift in Sources */,
 				250DAB8624592E5A006C8895 /* SSMocker.swift in Sources */,
+				139E4B1F245EACCB0048FD4B /* PhoneNumberOutputViewModel.swift in Sources */,
 				25E0DF7A2457E0290061C293 /* OnboardingControllerUI.swift in Sources */,
+				139E4B1C245EACA60048FD4B /* PhoneNumberInputViewModel.swift in Sources */,
 				25C0835224458E1B001578D1 /* SSFont.swift in Sources */,
 				25C0832724458804001578D1 /* MainNavigationController.swift in Sources */,
 				25E0DF7E2457F0E40061C293 /* ListsControllerUI.swift in Sources */,
 				25C0831324458394001578D1 /* Utility.swift in Sources */,
+				139E4B22245EACDD0048FD4B /* PhoneNumberOutputCell.swift in Sources */,
 				25E0DF812457F6C70061C293 /* SettingNavigator.swift in Sources */,
 				25C08322244585AA001578D1 /* LanguageManager.swift in Sources */,
 				25C08331244588C4001578D1 /* SplashViewController.swift in Sources */,
@@ -1034,13 +1218,20 @@
 				25C0832A24458854001578D1 /* Navigator.swift in Sources */,
 				25E0DF6C245783630061C293 /* OnboardingController.swift in Sources */,
 				250DAB8C24593425006C8895 /* ListCell.swift in Sources */,
+				13CDB24A245D6C5700749829 /* SimpleStringOutputViewModel.swift in Sources */,
 				25C0833924458A9F001578D1 /* ListsNavigator.swift in Sources */,
 				25C0834624458D66001578D1 /* SoundEffects.swift in Sources */,
+				13CDB247245D6B3D00749829 /* SimpleStringOutputCell.swift in Sources */,
 				25C0831E24458496001578D1 /* UserDefaults.swift in Sources */,
+				13CDB23E245D66CE00749829 /* SimpleStringInputCell.swift in Sources */,
+				13CDB254245D759E00749829 /* Error+Composer.swift in Sources */,
+				13CDB256245D918300749829 /* ComponentType+Composer.swift in Sources */,
+				139E4B0F245EAA570048FD4B /* ComponentElements+SimpleString.swift in Sources */,
 				25E0DF6D245783630061C293 /* OnboardingNavigator.swift in Sources */,
 				250DAB8824592E9B006C8895 /* IconModel.swift in Sources */,
 				25C08315244583B8001578D1 /* Vibrator.swift in Sources */,
 				13B6C5FC2443B136006BE51D /* AppDelegate.swift in Sources */,
+				139E4B25245EACF40048FD4B /* ComponentType+PhoneNumber.swift in Sources */,
 				25E0DF7C2457E5610061C293 /* ObservableExtensions.swift in Sources */,
 				25C0830C2445817B001578D1 /* ListHubColor.swift in Sources */,
 				25E0DF862457F6E50061C293 /* SettingController.swift in Sources */,
@@ -1051,9 +1242,11 @@
 				250DAB8F24593437006C8895 /* ListItemViewModel.swift in Sources */,
 				25E0DF70245783630061C293 /* OboardingItemViewModel.swift in Sources */,
 				25C08324244585D8001578D1 /* Application.swift in Sources */,
+				139E4B19245EAC970048FD4B /* PhoneNumberInputCell.swift in Sources */,
 				25E0DF742457D9BD0061C293 /* UIViewControllerExtensions.swift in Sources */,
 				25C0832D244588B9001578D1 /* SplashViewModel.swift in Sources */,
 				25C0830F24458242001578D1 /* UIColorExtensions.swift in Sources */,
+				139E4B0C245EAA300048FD4B /* ComponentType+SimpleString.swift in Sources */,
 				25E0DF892457F7150061C293 /* SettingUI.swift in Sources */,
 				13B6C5FE2443B136006BE51D /* SceneDelegate.swift in Sources */,
 				250DAB91245A94A0006C8895 /* ListHubFonts.swift in Sources */,
@@ -1106,7 +1299,9 @@
 				25C082FB24457FCF001578D1 /* DataBaseProtocol.swift in Sources */,
 				25E0DF782457DF000061C293 /* ViewModelType.swift in Sources */,
 				25C0830524458091001578D1 /* ComponentType.swift in Sources */,
-				250DAB7E24592206006C8895 /* ListTemplateTypes.swift in Sources */,
+				1308C0B3245C42260095364A /* ComponetElements.swift in Sources */,
+				1308C0B1245C3A920095364A /* SimpleString.swift in Sources */,
+				139E4B11245EABCF0048FD4B /* PhoneNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
