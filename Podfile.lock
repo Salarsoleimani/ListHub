@@ -4,6 +4,7 @@ PODS:
   - Hero (1.5.0)
   - IQKeyboardManagerSwift (6.5.5)
   - lottie-ios (3.1.8)
+  - MaterialShowcase (0.7.1)
   - QuickDB (2.0.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - Hero
   - IQKeyboardManagerSwift
   - lottie-ios
+  - MaterialShowcase
   - QuickDB (from `https://github.com/behrad-kzm/QuickDB`)
   - RxCocoa
   - RxSwift
@@ -39,6 +41,7 @@ SPEC REPOS:
     - Hero
     - IQKeyboardManagerSwift
     - lottie-ios
+    - MaterialShowcase
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -66,6 +69,7 @@ SPEC CHECKSUMS:
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  MaterialShowcase: baaca60627058085d6b304f5a30ee952e99cee21
   QuickDB: d7bb43c01b664fb935963f1756da5f42c9734b54
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
@@ -75,6 +79,6 @@ SPEC CHECKSUMS:
   Stellar: df980becd194eeb62d623af097582da0ef2219b9
   SwiftRater: 6094fa6e9b3866ff8beca0a871b4b5f9ab896a6d
 
-PODFILE CHECKSUM: b272c5ca17990d4ee47947a49256207a7a6552f3
+PODFILE CHECKSUM: d6c8b8738001b336e7f5d4aecc40832de8e16e07
 
 COCOAPODS: 1.9.0

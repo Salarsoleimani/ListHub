@@ -10,6 +10,7 @@ import UIKit
 import BEKListKit
 import RxSwift
 import AMScrollingNavbar
+import MaterialShowcase
 
 class ListsController: UIViewController {
   // MARK:- Outlets
@@ -25,6 +26,8 @@ class ListsController: UIViewController {
   let settingBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_setting"), style: .plain, target: nil, action: nil)
   let addListBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_add_list"), style: .plain, target: nil, action: nil)
     
+  let showcase = MaterialShowcase()
+
   let disposeBag = DisposeBag()
   // MARK:- LifeCycles
   override func viewDidLoad() {
@@ -33,8 +36,13 @@ class ListsController: UIViewController {
     setupDelegates()
     bindData()
     followNavHideWhenScrolling(true)
+
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    showWalktrough()
+  }
   override func viewDidDisappear(_ animated: Bool) {
     followNavHideWhenScrolling(false)
   }
@@ -63,6 +71,14 @@ class ListsController: UIViewController {
     if let navigationController = navigationController as? ScrollingNavigationController {
       isStartToFollow ? navigationController.followScrollView(myListsCollectionView) : navigationController.stopFollowingScrollView()
     }
+  }
+  private func showWalktrough() {
+    viewModel.shouldShowList.subscribe(onNext: { [showcase, addListBarButton] (shouldShow) in
+      if shouldShow || Defaults.appOpenedCount < 2 {
+        showcase.setTargetView(barButtonItem: addListBarButton, tapThrough: true)
+        showcase.show(animated: true, completion: nil)
+      }
+    }).disposed(by: disposeBag)
   }
 }
 extension ListsController: UICollectionViewDelegateFlowLayout {

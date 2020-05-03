@@ -14,6 +14,10 @@ enum ListHubColor {
   
   case navigationButtonTint
   
+  case walktroughTarget
+  case walktroughBackground
+  case walktroughText
+
   case listCellBackground
   case listCellTitle
   case listCellDescription
@@ -40,6 +44,14 @@ extension ListHubColor {
       
     // Navigation
     case .navigationButtonTint:
+      instanceColor = UIColor.UITraitCollectionColor(darkModeColor: UIColor(hex: 0xF2F2F2), lightModeColor: UIColor(hex: 0x686868))
+      
+      // Walkthrough
+    case .walktroughTarget:
+      instanceColor =  UIColor.UITraitCollectionColor(darkModeColor: UIColor(hex: 0x444444), lightModeColor: UIColor(hex: 0x989595))
+    case .walktroughBackground:
+      instanceColor = UIColor.UITraitCollectionColor(darkModeColor: UIColor(hex: 0x232323), lightModeColor: UIColor(hex: 0xF9F9F9))
+    case .walktroughText:
       instanceColor = UIColor.UITraitCollectionColor(darkModeColor: UIColor(hex: 0xF2F2F2), lightModeColor: UIColor(hex: 0x686868))
       
     // Lists
