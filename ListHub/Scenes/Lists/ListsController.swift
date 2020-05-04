@@ -36,7 +36,6 @@ class ListsController: UIViewController {
     setupDelegates()
     bindData()
     followNavHideWhenScrolling(true)
-
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -62,21 +61,27 @@ class ListsController: UIViewController {
         myListsCollectionView?.push(cell: cell)
       }
     }).disposed(by: disposeBag)
-    outputs.showList.drive(lottieContainerView.rx.isHidden).disposed(by: disposeBag)
+    
+    outputs.shouldShowEmptyList.drive(lottieContainerView.rx.isHidden).disposed(by: disposeBag)
   }
+  
   private func setupDelegates() {
     myListsCollectionView.delegate = self
   }
+  
   private func followNavHideWhenScrolling(_ isStartToFollow: Bool) {
     if let navigationController = navigationController as? ScrollingNavigationController {
       isStartToFollow ? navigationController.followScrollView(myListsCollectionView) : navigationController.stopFollowingScrollView()
     }
   }
+  
   private func showWalktrough() {
-    viewModel.shouldShowList.subscribe(onNext: { [showcase, addListBarButton] (shouldShow) in
+    viewModel.shouldShowWalktrough.subscribe(onNext: { [viewModel, showcase, addListBarButton] (shouldShow) in
       if shouldShow || Defaults.appOpenedCount < 2 {
         showcase.setTargetView(barButtonItem: addListBarButton, tapThrough: true)
-        showcase.show(animated: true, completion: nil)
+        showcase.show(animated: true) { [viewModel] in
+          viewModel?.shouldShowWalktrough.accept(false)
+        }
       }
     }).disposed(by: disposeBag)
   }

@@ -16,7 +16,7 @@ extension ListsController {
     setupHero()
     setupNavigationUI()
     setupCollectionView()
-    view.backgroundColor = ListHubColor.background.value
+    view.backgroundColor = LHColors.background.value
     
     setupLottie()
     setWalktrough()
@@ -51,26 +51,26 @@ extension ListsController {
     setupEmptyLabelUI()
   }
   private func setupEmptyLabelUI() {
-    lottieLabel.text = "lists_empty_coachmark".localize()
-    lottieLabel.font = ListHubFonts.onboardingTitle
-    lottieLabel.textColor = ListHubColor.listCellTitle.value
+    lottieLabel.text = "lists_empty_coachmark_title".localize() + "\n" + "lists_empty_coachmark_desc".localize()
+    lottieLabel.font = LHFonts.onboardingTitle
+    lottieLabel.textColor = LHColors.listCellTitle.value
   }
   
   private func setWalktrough() {
     showcase.backgroundAlpha = 0.9
-    showcase.backgroundPromptColor = ListHubColor.walktroughBackground.value
+    showcase.backgroundPromptColor = LHColors.walktroughBackground.value
     showcase.backgroundPromptColorAlpha = 0.95
     showcase.backgroundViewType = .full
     
     showcase.targetHolderRadius = 100
-    showcase.targetHolderColor = ListHubColor.walktroughTarget.value
-    showcase.aniRippleColor = ListHubColor.walktroughTarget.value
+    showcase.targetHolderColor = LHColors.walktroughTarget.value
+    showcase.aniRippleColor = LHColors.walktroughTarget.value
 
     showcase.primaryText = "lists_empty_coachmark_title".localize()
-    showcase.primaryTextColor = ListHubColor.walktroughText.value
-    showcase.primaryTextFont = ListHubFonts.h2Bold
+    showcase.primaryTextColor = LHColors.walktroughText.value
+    showcase.primaryTextFont = LHFonts.h2Bold
     showcase.secondaryText = "lists_empty_coachmark_desc".localize()
-    showcase.secondaryTextColor = ListHubColor.walktroughText.value
-    showcase.secondaryTextFont = ListHubFonts.h4Regular
+    showcase.secondaryTextColor = LHColors.walktroughText.value
+    showcase.secondaryTextFont = LHFonts.h4Regular
   }
 }

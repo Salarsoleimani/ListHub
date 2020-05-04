@@ -23,8 +23,8 @@ class OnboardingCell: UICollectionViewCell {
   }
 // MARK:- Functions
   private func setupUI() {
-    titleLabel.font = ListHubFonts.onboardingTitle
-    descriptionLabel.font = ListHubFonts.onboardingDescription
+    titleLabel.font = LHFonts.onboardingTitle
+    descriptionLabel.font = LHFonts.onboardingDescription
     descriptionLabel.numberOfLines = 0
   }
 }

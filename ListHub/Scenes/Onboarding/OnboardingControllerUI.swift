@@ -12,7 +12,7 @@ import BEKListKit
 extension OnboardingController {
   func setupUI() {    
     setupCollectionView()
-    view.backgroundColor = ListHubColor.background.value
+    view.backgroundColor = LHColors.background.value
   }
   private func setupCollectionView() {
     let size = CGSize(width: StaticConstants.mainScreenWidth, height: StaticConstants.mainScreenHeight)

@@ -17,7 +17,7 @@ final class ListsNavigator: Navigator {
     //AnalyticLogProvider.logNavigator(name: NSStringFromClass(type(of: self)), functionName: "setup")
   }
   func toAddList() {
-    
+    AddListNavigator(navigationController: navigationController, appEngine: appEngine).setup()
   }
   func toList() {
     

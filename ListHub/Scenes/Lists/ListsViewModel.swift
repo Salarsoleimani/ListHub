@@ -13,7 +13,7 @@ final class ListsViewModel: ViewModelType {
 // MARK:- Constants
   private let navigator: ListsNavigator
   private let engine: EngineManagerProtocol
-  let shouldShowList = BehaviorRelay<Bool>(value: true)
+  let shouldShowWalktrough = BehaviorRelay<Bool>(value: true)
 
 // MARK:- Initialization
   init(navigator: ListsNavigator, engine: EngineManagerProtocol) {
@@ -41,12 +41,15 @@ final class ListsViewModel: ViewModelType {
     
     let rxLists = BehaviorRelay<[ListModel]>(value: [ListModel]())
     
-    engine.getLists { [shouldShowList, rxLists] (lists) in
+    let shouldShowEmptyList = BehaviorRelay<Bool>(value: true)
+
+    engine.getLists { [shouldShowWalktrough, rxLists] (lists) in
       rxLists.accept(lists)
-      lists.count == 0 ? shouldShowList.accept(false) : shouldShowList.accept(true)
+      lists.count == 0 ? shouldShowWalktrough.accept(false) : shouldShowWalktrough.accept(true)
+      lists.count == 0 ? shouldShowEmptyList.accept(false) : shouldShowEmptyList.accept(true)
     }
     
-    return Output(addListTrigger: addListTrigger, openSettingTrigger: openSettingTrigger, lists: rxLists, showList: shouldShowList.asDriver())
+    return Output(addListTrigger: addListTrigger, openSettingTrigger: openSettingTrigger, lists: rxLists, shouldShowEmptyList: shouldShowEmptyList.asDriver())
   }
 }
 // MARK:- Inputs & Outputs
@@ -60,6 +63,6 @@ extension ListsViewModel {
     let addListTrigger: Driver<Void>
     let openSettingTrigger: Driver<Void>
     let lists: BehaviorRelay<[ListModel]>
-    let showList: Driver<Bool>
+    let shouldShowEmptyList: Driver<Bool>
   }
 }

@@ -1,5 +1,5 @@
 //
-//  ListHubColors.swift
+//  LHColors.swift
 //  ListHub
 //
 //  Created by Salar Soleimani on 2020-04-14.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum ListHubColor {
+enum LHColors {
   case background
   
   case navigationButtonTint
@@ -32,7 +32,7 @@ enum ListHubColor {
   }
 }
 
-extension ListHubColor {
+extension LHColors {
   
   var value: UIColor {
     var instanceColor = UIColor.clear

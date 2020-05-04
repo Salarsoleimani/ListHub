@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  LHFonts.swift
 //  ListHub
 //
 //  Created by Salar Soleimani on 2020-04-30.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ListHubFonts {
+struct LHFonts {
   static let h2Bold = SSFont(.installed(.montserrat, .bold), size: .standard(.h1)).instance
   static let h4Regular = SSFont(.installed(.montserrat, .regular), size: .standard(.h4)).instance
 
