@@ -10,6 +10,6 @@ import UIKit
 
 extension AddListController {
   func setupUI() {
-
+    view.backgroundColor = LHColors.background.value
   }
 }

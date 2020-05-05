@@ -96,6 +96,18 @@
 		25CACD40245F870B004E7CA7 /* AddListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD3B245F870B004E7CA7 /* AddListViewModel.swift */; };
 		25CACD41245F870B004E7CA7 /* AddListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25CACD3C245F870B004E7CA7 /* AddListController.xib */; };
 		25CACD42245F870B004E7CA7 /* AddListUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD3D245F870B004E7CA7 /* AddListUI.swift */; };
+		25CACD4924610FE9004E7CA7 /* IconsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD4424610FE9004E7CA7 /* IconsNavigator.swift */; };
+		25CACD4A24610FE9004E7CA7 /* IconsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD4524610FE9004E7CA7 /* IconsController.swift */; };
+		25CACD4B24610FE9004E7CA7 /* IconsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD4624610FE9004E7CA7 /* IconsViewModel.swift */; };
+		25CACD4C24610FE9004E7CA7 /* IconsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD4724610FE9004E7CA7 /* IconsUI.swift */; };
+		25CACD4D24610FE9004E7CA7 /* IconsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25CACD4824610FE9004E7CA7 /* IconsController.xib */; };
+		25CACD5124611249004E7CA7 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD4F24611249004E7CA7 /* ColorModel.swift */; };
+		25CACD5224611249004E7CA7 /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 25CACD5024611249004E7CA7 /* Colors.json */; };
+		25CACD57246113E3004E7CA7 /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD55246113E3004E7CA7 /* IconCell.swift */; };
+		25CACD58246113E3004E7CA7 /* IconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25CACD56246113E3004E7CA7 /* IconCell.xib */; };
+		25CACD5B246113F0004E7CA7 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD59246113F0004E7CA7 /* ColorCell.swift */; };
+		25CACD5C246113F0004E7CA7 /* ColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25CACD5A246113F0004E7CA7 /* ColorCell.xib */; };
+		25CACD5E24611E18004E7CA7 /* IconCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD5D24611E18004E7CA7 /* IconCellViewModel.swift */; };
 		25E0DF6C245783630061C293 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0DF66245783630061C293 /* OnboardingController.swift */; };
 		25E0DF6D245783630061C293 /* OnboardingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0DF67245783630061C293 /* OnboardingNavigator.swift */; };
 		25E0DF6E245783630061C293 /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E0DF68245783630061C293 /* OnboardingCell.xib */; };
@@ -278,6 +290,18 @@
 		25CACD3B245F870B004E7CA7 /* AddListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListViewModel.swift; sourceTree = "<group>"; };
 		25CACD3C245F870B004E7CA7 /* AddListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddListController.xib; sourceTree = "<group>"; };
 		25CACD3D245F870B004E7CA7 /* AddListUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListUI.swift; sourceTree = "<group>"; };
+		25CACD4424610FE9004E7CA7 /* IconsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsNavigator.swift; sourceTree = "<group>"; };
+		25CACD4524610FE9004E7CA7 /* IconsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsController.swift; sourceTree = "<group>"; };
+		25CACD4624610FE9004E7CA7 /* IconsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsViewModel.swift; sourceTree = "<group>"; };
+		25CACD4724610FE9004E7CA7 /* IconsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsUI.swift; sourceTree = "<group>"; };
+		25CACD4824610FE9004E7CA7 /* IconsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconsController.xib; sourceTree = "<group>"; };
+		25CACD4F24611249004E7CA7 /* ColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		25CACD5024611249004E7CA7 /* Colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
+		25CACD55246113E3004E7CA7 /* IconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
+		25CACD56246113E3004E7CA7 /* IconCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconCell.xib; sourceTree = "<group>"; };
+		25CACD59246113F0004E7CA7 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		25CACD5A246113F0004E7CA7 /* ColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCell.xib; sourceTree = "<group>"; };
+		25CACD5D24611E18004E7CA7 /* IconCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCellViewModel.swift; sourceTree = "<group>"; };
 		25E0DF66245783630061C293 /* OnboardingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
 		25E0DF67245783630061C293 /* OnboardingNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingNavigator.swift; sourceTree = "<group>"; };
 		25E0DF68245783630061C293 /* OnboardingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OnboardingCell.xib; path = ../OnboardingCell.xib; sourceTree = "<group>"; };
@@ -717,6 +741,7 @@
 				25C0830B2445817B001578D1 /* ListHubColor.swift */,
 				13B6C6072443B14E006BE51D /* Assets.xcassets */,
 				25C08353244590FE001578D1 /* Localizable.strings */,
+				25CACD4E24611226004E7CA7 /* Colors */,
 				2551B727245BC6ED00BB3689 /* Lottie */,
 				250DAB8124592D7F006C8895 /* Icons */,
 				25C0834B24458D9A001578D1 /* Sounds */,
@@ -819,6 +844,7 @@
 		25CACD38245F86FC004E7CA7 /* AddList */ = {
 			isa = PBXGroup;
 			children = (
+				25CACD4324610FD9004E7CA7 /* Icons */,
 				25CACD39245F870B004E7CA7 /* AddListNavigator.swift */,
 				25CACD3A245F870B004E7CA7 /* AddListController.swift */,
 				25CACD3B245F870B004E7CA7 /* AddListViewModel.swift */,
@@ -826,6 +852,48 @@
 				25CACD3D245F870B004E7CA7 /* AddListUI.swift */,
 			);
 			path = AddList;
+			sourceTree = "<group>";
+		};
+		25CACD4324610FD9004E7CA7 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				25CACD54246113C3004E7CA7 /* IconCell */,
+				25CACD53246113B6004E7CA7 /* ColorCell */,
+				25CACD4524610FE9004E7CA7 /* IconsController.swift */,
+				25CACD4424610FE9004E7CA7 /* IconsNavigator.swift */,
+				25CACD4624610FE9004E7CA7 /* IconsViewModel.swift */,
+				25CACD4724610FE9004E7CA7 /* IconsUI.swift */,
+				25CACD4824610FE9004E7CA7 /* IconsController.xib */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		25CACD4E24611226004E7CA7 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				25CACD4F24611249004E7CA7 /* ColorModel.swift */,
+				25CACD5024611249004E7CA7 /* Colors.json */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		25CACD53246113B6004E7CA7 /* ColorCell */ = {
+			isa = PBXGroup;
+			children = (
+				25CACD59246113F0004E7CA7 /* ColorCell.swift */,
+				25CACD5A246113F0004E7CA7 /* ColorCell.xib */,
+			);
+			path = ColorCell;
+			sourceTree = "<group>";
+		};
+		25CACD54246113C3004E7CA7 /* IconCell */ = {
+			isa = PBXGroup;
+			children = (
+				25CACD55246113E3004E7CA7 /* IconCell.swift */,
+				25CACD56246113E3004E7CA7 /* IconCell.xib */,
+				25CACD5D24611E18004E7CA7 /* IconCellViewModel.swift */,
+			);
+			path = IconCell;
 			sourceTree = "<group>";
 		};
 		25E0DF722457846F0061C293 /* Cell */ = {
@@ -1077,6 +1145,8 @@
 				250DAB8324592DA7006C8895 /* Icons.json in Resources */,
 				25C0834F24458DB8001578D1 /* Montserrat-Regular.ttf in Resources */,
 				139E4B23245EACDD0048FD4B /* PhoneNumberOutputCell.xib in Resources */,
+				25CACD4D24610FE9004E7CA7 /* IconsController.xib in Resources */,
+				25CACD5224611249004E7CA7 /* Colors.json in Resources */,
 				13B6C60B2443B14E006BE51D /* LaunchScreen.storyboard in Resources */,
 				139E4B1A245EAC970048FD4B /* PhoneNumberInputCell.xib in Resources */,
 				25C08332244588C4001578D1 /* SplashViewController.xib in Resources */,
@@ -1088,9 +1158,11 @@
 				25C0833724458A86001578D1 /* ListsController.xib in Resources */,
 				25C0834924458D8B001578D1 /* SplashSound.mp3 in Resources */,
 				25E0DF6E245783630061C293 /* OnboardingCell.xib in Resources */,
+				25CACD58246113E3004E7CA7 /* IconCell.xib in Resources */,
 				13CDB23F245D66CE00749829 /* SimpleStringInputCell.xib in Resources */,
 				25E0DF71245783630061C293 /* OnboardingController.xib in Resources */,
 				25C0834A24458D8B001578D1 /* ErrorSound.mp3 in Resources */,
+				25CACD5C246113F0004E7CA7 /* ColorCell.xib in Resources */,
 				2551B726245BC6E000BB3689 /* Empty.json in Resources */,
 				250DAB8D24593425006C8895 /* ListCell.xib in Resources */,
 			);
@@ -1224,6 +1296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25CACD4924610FE9004E7CA7 /* IconsNavigator.swift in Sources */,
 				13CDB243245D695500749829 /* SimpleStringInputViewModel.swift in Sources */,
 				25CACD3E245F870B004E7CA7 /* AddListNavigator.swift in Sources */,
 				250DAB8624592E5A006C8895 /* SSMocker.swift in Sources */,
@@ -1239,9 +1312,12 @@
 				25E0DF812457F6C70061C293 /* SettingNavigator.swift in Sources */,
 				25C08322244585AA001578D1 /* LanguageManager.swift in Sources */,
 				25C08331244588C4001578D1 /* SplashViewController.swift in Sources */,
+				25CACD5E24611E18004E7CA7 /* IconCellViewModel.swift in Sources */,
 				25C0831C244583E3001578D1 /* StaticConstants.swift in Sources */,
 				13B6C6002443B136006BE51D /* ListsController.swift in Sources */,
 				25C0832A24458854001578D1 /* Navigator.swift in Sources */,
+				25CACD4B24610FE9004E7CA7 /* IconsViewModel.swift in Sources */,
+				25CACD4C24610FE9004E7CA7 /* IconsUI.swift in Sources */,
 				25E0DF6C245783630061C293 /* OnboardingController.swift in Sources */,
 				250DAB8C24593425006C8895 /* ListCell.swift in Sources */,
 				13CDB24A245D6C5700749829 /* SimpleStringOutputViewModel.swift in Sources */,
@@ -1250,6 +1326,7 @@
 				13CDB247245D6B3D00749829 /* SimpleStringOutputCell.swift in Sources */,
 				25C0831E24458496001578D1 /* UserDefaults.swift in Sources */,
 				13CDB23E245D66CE00749829 /* SimpleStringInputCell.swift in Sources */,
+				25CACD57246113E3004E7CA7 /* IconCell.swift in Sources */,
 				13CDB254245D759E00749829 /* Error+Composer.swift in Sources */,
 				13CDB256245D918300749829 /* ComponentType+Composer.swift in Sources */,
 				25E0DF6D245783630061C293 /* OnboardingNavigator.swift in Sources */,
@@ -1258,7 +1335,10 @@
 				25C08315244583B8001578D1 /* Vibrator.swift in Sources */,
 				13B6C5FC2443B136006BE51D /* AppDelegate.swift in Sources */,
 				139E4B25245EACF40048FD4B /* ComponentType+PhoneNumber.swift in Sources */,
+				25CACD4A24610FE9004E7CA7 /* IconsController.swift in Sources */,
 				25E0DF7C2457E5610061C293 /* ObservableExtensions.swift in Sources */,
+				25CACD5124611249004E7CA7 /* ColorModel.swift in Sources */,
+				25CACD5B246113F0004E7CA7 /* ColorCell.swift in Sources */,
 				25C0830C2445817B001578D1 /* ListHubColor.swift in Sources */,
 				25E0DF862457F6E50061C293 /* SettingController.swift in Sources */,
 				25E0DF762457DE490061C293 /* OnboardingViewModel.swift in Sources */,

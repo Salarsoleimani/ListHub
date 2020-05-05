@@ -1,0 +1,52 @@
+[
+  {
+    "id": 0,
+    "name": "green",
+    "value": "#217C6B"
+  },
+  {
+    "id": 1,
+    "name": "yellow",
+    "value": "#FFF100"
+  },
+  {
+    "id": 2,
+    "name": "purple",
+    "value": "#363374"
+  },
+  {
+    "id": 3,
+    "name": "blue",
+    "value": "#0A00FF"
+  },
+  {
+    "id": 4,
+    "name": "red",
+    "value": "#FF0000"
+  },
+  {
+    "id": 5,
+    "name": "purple",
+    "value": "#FF008D"
+  },
+  {
+    "id": 6,
+    "name": "bluesky",
+    "value": "#00BAFF"
+  },
+  {
+    "id": 7,
+    "name": "grey",
+    "value": "#41565D"
+  },
+  {
+    "id": 8,
+    "name": "white",
+    "value": "#FFFFFF"
+  },
+  {
+    "id": 9,
+    "name": "black",
+    "value": "#000000"
+  }
+]

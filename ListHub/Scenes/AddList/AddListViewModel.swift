@@ -8,6 +8,7 @@
 
 import Foundation
 import Domain
+import RxCocoa
 
 final class AddListViewModel: ViewModelType {
 // MARK:- Constants
@@ -18,16 +19,19 @@ final class AddListViewModel: ViewModelType {
   }
 // MARK:- Functions
   func transform(input: AddListViewModel.Input) -> AddListViewModel.Output {
-
-    return Output()
+    let iconTrigger = input.iconTrigger.map { [navigator] _ -> Void in
+      navigator.toIcons(delegate: input.delegate)
+    }
+    return Output(iconTrigger: iconTrigger)
   }
 }
 // MARK:- Inputs & Outputs
 extension AddListViewModel {
   struct Input {
-
+    let delegate: AddListControllerDelegate
+    let iconTrigger: Driver<Void>
   }
   struct Output {
-
+    let iconTrigger: Driver<Void>
   }
 }
