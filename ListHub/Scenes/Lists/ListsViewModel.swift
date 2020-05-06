@@ -45,7 +45,7 @@ final class ListsViewModel: ViewModelType {
 
     engine.getLists { [shouldShowWalktrough, rxLists] (lists) in
       rxLists.accept(lists)
-      lists.count == 0 ? shouldShowWalktrough.accept(false) : shouldShowWalktrough.accept(true)
+      lists.count == 0 ? shouldShowWalktrough.accept(true) : shouldShowWalktrough.accept(false)
       lists.count == 0 ? shouldShowEmptyList.accept(false) : shouldShowEmptyList.accept(true)
     }
     

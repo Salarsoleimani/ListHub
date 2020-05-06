@@ -108,6 +108,7 @@
 		25CACD5B246113F0004E7CA7 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD59246113F0004E7CA7 /* ColorCell.swift */; };
 		25CACD5C246113F0004E7CA7 /* ColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25CACD5A246113F0004E7CA7 /* ColorCell.xib */; };
 		25CACD5E24611E18004E7CA7 /* IconCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD5D24611E18004E7CA7 /* IconCellViewModel.swift */; };
+		25CACD60246228E6004E7CA7 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CACD5F246228E6004E7CA7 /* UIViewExtensions.swift */; };
 		25E0DF6C245783630061C293 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0DF66245783630061C293 /* OnboardingController.swift */; };
 		25E0DF6D245783630061C293 /* OnboardingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0DF67245783630061C293 /* OnboardingNavigator.swift */; };
 		25E0DF6E245783630061C293 /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E0DF68245783630061C293 /* OnboardingCell.xib */; };
@@ -302,6 +303,7 @@
 		25CACD59246113F0004E7CA7 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		25CACD5A246113F0004E7CA7 /* ColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCell.xib; sourceTree = "<group>"; };
 		25CACD5D24611E18004E7CA7 /* IconCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCellViewModel.swift; sourceTree = "<group>"; };
+		25CACD5F246228E6004E7CA7 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		25E0DF66245783630061C293 /* OnboardingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
 		25E0DF67245783630061C293 /* OnboardingNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingNavigator.swift; sourceTree = "<group>"; };
 		25E0DF68245783630061C293 /* OnboardingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OnboardingCell.xib; path = ../OnboardingCell.xib; sourceTree = "<group>"; };
@@ -766,6 +768,7 @@
 				25E0DF732457D9BD0061C293 /* UIViewControllerExtensions.swift */,
 				25E0DF7B2457E5610061C293 /* ObservableExtensions.swift */,
 				13CDB253245D759E00749829 /* Error+Composer.swift */,
+				25CACD5F246228E6004E7CA7 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1318,6 +1321,7 @@
 				25C0832A24458854001578D1 /* Navigator.swift in Sources */,
 				25CACD4B24610FE9004E7CA7 /* IconsViewModel.swift in Sources */,
 				25CACD4C24610FE9004E7CA7 /* IconsUI.swift in Sources */,
+				25CACD60246228E6004E7CA7 /* UIViewExtensions.swift in Sources */,
 				25E0DF6C245783630061C293 /* OnboardingController.swift in Sources */,
 				250DAB8C24593425006C8895 /* ListCell.swift in Sources */,
 				13CDB24A245D6C5700749829 /* SimpleStringOutputViewModel.swift in Sources */,
