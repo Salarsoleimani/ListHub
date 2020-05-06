@@ -8,13 +8,18 @@
 
 import Foundation
 public protocol ComponentTypeProtocol {
-	associatedtype Input: InputComponentTypeConvertable
-	associatedtype Output: OutputComponentTypeConvertable
+	associatedtype Input: InputComponentType
+	associatedtype Output: OutputComponentType
 }
 
-public protocol InputComponentTypeConvertable {
-	func asType() -> ComponentType.Inputs
+public protocol InputComponentType {
+	func asEnum() -> ComponentType.Inputs
+	var listUID: UUID { get }
 }
-public protocol OutputComponentTypeConvertable {
-	func asType() -> ComponentType.Outputs
+public protocol OutputComponentType {
+	func asEnum() -> ComponentType.Outputs
+	var itemUID: UUID { get }
+}
+public protocol ToInputConvertable {
+	func asInput() -> InputComponentType
 }

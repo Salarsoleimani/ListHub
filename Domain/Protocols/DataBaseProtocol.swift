@@ -9,13 +9,26 @@
 import Foundation
 
 public protocol DatabaseManagerProtocol {
-  func add(List list: ListModel, response: ((Bool) -> Void)?)
+	
+	//MARK: - List Related Functions
+	func add(List list: ListModel, components: [InputComponentType], response: ((Bool) -> Void)?)
 	func get(Lists response: @escaping ([ListModel]) -> Void)
 	func delete(List id: UUID,  response: @escaping (Bool) -> Void)
 	func update(List list: ListModel, response: @escaping (Bool) -> Void)
   
-  func get(Items response: @escaping ([ListItemModel]) -> Void)
-  func get(ComponentElements forList: UUID, response: @escaping ([ComponentType]) -> Void)
+	//MARK: - Item Related Functions
+	func add(Item item: ListItemModel, components: [OutputComponentType], response: ((Bool) -> Void)?)
+	func get(ItemsForListUID: UUID, response: @escaping ([ListItemModel]) -> Void)
+	func delete(Item id: UUID,  response: @escaping (Bool) -> Void)
+	func update(Item item: ListItemModel, response: @escaping (Bool) -> Void)
+	
+	//MARK: - Component Related Functions
+	func add(Item input: InputComponentType, response: @escaping (Bool) -> Void)
+	func get(InputComponentsForListUID: UUID, response: @escaping ([InputComponentType]) -> Void)
+	func get(OutputComponentsForItemUID: UUID, response: @escaping ([OutputComponentType]) -> Void)
+	func update(Item outputs: [OutputComponentType], response: @escaping (Bool) -> Void)
+	func update(Item inputs: [InputComponentType], response: @escaping (Bool) -> Void)
+	func delete(Item input: InputComponentType, response: @escaping (Bool) -> Void)
 }
 
 

@@ -10,7 +10,7 @@ import Foundation
 import Domain
 struct test {
 	func tes(){
-		let type = ComponentElements.SimpleString.Input(title: "ali").asType()
+		let type = ComponentElements.SimpleString.Input(title: "Ali", listUID: UUID()).asEnum()
 		if let vm: PhoneNumberInputViewModel = try? type.asViewModel(){
 			
 		}

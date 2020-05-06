@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1308C0B1245C3A920095364A /* SimpleString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308C0B0245C3A920095364A /* SimpleString.swift */; };
 		1308C0B3245C42260095364A /* ComponetElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308C0B2245C42260095364A /* ComponetElements.swift */; };
+		13866CFD246301D600AC4AB5 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13866CFC246301D600AC4AB5 /* ListItemModel.swift */; };
+		13866D022463056500AC4AB5 /* SimpleStringCreationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13866D002463056500AC4AB5 /* SimpleStringCreationCell.swift */; };
+		13866D032463056500AC4AB5 /* SimpleStringCreationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13866D012463056500AC4AB5 /* SimpleStringCreationCell.xib */; };
+		13866D05246307DD00AC4AB5 /* SimpleStringCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13866D04246307DD00AC4AB5 /* SimpleStringCreationViewModel.swift */; };
 		139E4B0C245EAA300048FD4B /* ComponentType+SimpleString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B0B245EAA300048FD4B /* ComponentType+SimpleString.swift */; };
 		139E4B11245EABCF0048FD4B /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B10245EABCF0048FD4B /* PhoneNumber.swift */; };
 		139E4B19245EAC970048FD4B /* PhoneNumberInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E4B17245EAC970048FD4B /* PhoneNumberInputCell.swift */; };
@@ -202,6 +206,10 @@
 /* Begin PBXFileReference section */
 		1308C0B0245C3A920095364A /* SimpleString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleString.swift; sourceTree = "<group>"; };
 		1308C0B2245C42260095364A /* ComponetElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponetElements.swift; sourceTree = "<group>"; };
+		13866CFC246301D600AC4AB5 /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
+		13866D002463056500AC4AB5 /* SimpleStringCreationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStringCreationCell.swift; sourceTree = "<group>"; };
+		13866D012463056500AC4AB5 /* SimpleStringCreationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleStringCreationCell.xib; sourceTree = "<group>"; };
+		13866D04246307DD00AC4AB5 /* SimpleStringCreationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStringCreationViewModel.swift; sourceTree = "<group>"; };
 		139E4B0B245EAA300048FD4B /* ComponentType+SimpleString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentType+SimpleString.swift"; sourceTree = "<group>"; };
 		139E4B10245EABCF0048FD4B /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		139E4B17245EAC970048FD4B /* PhoneNumberInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberInputCell.swift; sourceTree = "<group>"; };
@@ -401,6 +409,24 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		13866CFE246304D200AC4AB5 /* Creation */ = {
+			isa = PBXGroup;
+			children = (
+				13866CFF246304F600AC4AB5 /* VM */,
+				13866D002463056500AC4AB5 /* SimpleStringCreationCell.swift */,
+				13866D012463056500AC4AB5 /* SimpleStringCreationCell.xib */,
+			);
+			path = Creation;
+			sourceTree = "<group>";
+		};
+		13866CFF246304F600AC4AB5 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				13866D04246307DD00AC4AB5 /* SimpleStringCreationViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
 		139E4B0D245EAA3B0048FD4B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				139E4B0D245EAA3B0048FD4B /* Extensions */,
+				13866CFE246304D200AC4AB5 /* Creation */,
 				13CDB23B245D663800749829 /* Output */,
 				13CDB23A245D663200749829 /* Input */,
 			);
@@ -695,6 +722,7 @@
 			children = (
 				1308C0AD245C3A1A0095364A /* Components */,
 				25C0830224458071001578D1 /* ListModel.swift */,
+				13866CFC246301D600AC4AB5 /* ListItemModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -1166,6 +1194,7 @@
 				25E0DF71245783630061C293 /* OnboardingController.xib in Resources */,
 				25C0834A24458D8B001578D1 /* ErrorSound.mp3 in Resources */,
 				25CACD5C246113F0004E7CA7 /* ColorCell.xib in Resources */,
+				13866D032463056500AC4AB5 /* SimpleStringCreationCell.xib in Resources */,
 				2551B726245BC6E000BB3689 /* Empty.json in Resources */,
 				250DAB8D24593425006C8895 /* ListCell.xib in Resources */,
 			);
@@ -1331,6 +1360,7 @@
 				25C0831E24458496001578D1 /* UserDefaults.swift in Sources */,
 				13CDB23E245D66CE00749829 /* SimpleStringInputCell.swift in Sources */,
 				25CACD57246113E3004E7CA7 /* IconCell.swift in Sources */,
+				13866D05246307DD00AC4AB5 /* SimpleStringCreationViewModel.swift in Sources */,
 				13CDB254245D759E00749829 /* Error+Composer.swift in Sources */,
 				13CDB256245D918300749829 /* ComponentType+Composer.swift in Sources */,
 				25E0DF6D245783630061C293 /* OnboardingNavigator.swift in Sources */,
@@ -1345,6 +1375,7 @@
 				25CACD5B246113F0004E7CA7 /* ColorCell.swift in Sources */,
 				25C0830C2445817B001578D1 /* ListHubColor.swift in Sources */,
 				25E0DF862457F6E50061C293 /* SettingController.swift in Sources */,
+				13866D022463056500AC4AB5 /* SimpleStringCreationCell.swift in Sources */,
 				25E0DF762457DE490061C293 /* OnboardingViewModel.swift in Sources */,
 				25C0833B24458AC0001578D1 /* ListsViewModel.swift in Sources */,
 				25C08333244588C4001578D1 /* SplashNavigator.swift in Sources */,
@@ -1411,6 +1442,7 @@
 				139E4B27245EBF010048FD4B /* ComponentTypeProtocol.swift in Sources */,
 				25E0DF782457DF000061C293 /* ViewModelType.swift in Sources */,
 				25C0830524458091001578D1 /* ComponentType.swift in Sources */,
+				13866CFD246301D600AC4AB5 /* ListItemModel.swift in Sources */,
 				1308C0B3245C42260095364A /* ComponetElements.swift in Sources */,
 				1308C0B1245C3A920095364A /* SimpleString.swift in Sources */,
 				139E4B11245EABCF0048FD4B /* PhoneNumber.swift in Sources */,

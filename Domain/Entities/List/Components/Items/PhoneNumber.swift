@@ -11,29 +11,40 @@ import QuickDB
 
 public extension ComponentElements {
 	enum PhoneNumber: ComponentTypeProtocol {
-		public struct Input: Codable, InputComponentTypeConvertable {
-			public func asType() -> ComponentType.Inputs {
+		
+		//MARK: - Input component of Phone Number
+		public struct Input: Codable, InputComponentType {
+
+			public let title: String
+			public var listUID: UUID
+			
+			public init(title: String, listUID: UUID) {
+				self.title = title
+				self.listUID = listUID
+			}
+			public func asEnum() -> ComponentType.Inputs {
 				return ComponentType.Inputs.phoneNumber(self)
 			}
-			
-			public init(title: String) {
-				self.title = title
-			}
-			public let title: String
 		}
 		
-		public struct Output: Codable, OutputComponentTypeConvertable {
-			public func asType() -> ComponentType.Outputs {
-				return ComponentType.Outputs.phoneNumber(self)
-			}
+		
+		
+		//MARK: - Output component of Phone Number
+		public struct Output: Codable, OutputComponentType {
 			
-			public init(title: String, content: String) {
-				self.title = title
-				self.content = content
-			}
-			
+			public var itemUID: UUID
 			public let title: String
 			public let content: String
+			
+			public init(title: String, content: String, itemUID: UUID) {
+				self.title = title
+				self.content = content
+				self.itemUID = itemUID
+			}
+			
+			public func asEnum() -> ComponentType.Outputs {
+				return ComponentType.Outputs.phoneNumber(self)
+			}
 		}
 	}
 }
