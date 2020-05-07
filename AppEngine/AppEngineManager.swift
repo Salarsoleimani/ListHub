@@ -20,7 +20,7 @@ final public class AppEngineManager: EngineManagerProtocol {
     dbManager.get(Lists: response)
   }
   
-  public func add(List list: ListModel, response: ((Bool) -> Void)?) {
-    dbManager.add(List: list, response: response)
+    public func add(List list: ListModel, components: [InputComponentType], response: ((Bool) -> Void)?) {
+    
   }
 }

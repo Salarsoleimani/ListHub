@@ -1,5 +1,5 @@
 //
-//  EngineManagerProtocol.swift
+//  ListItemManagerProtocol.swift
 //  Domain
 //
 //  Created by Salar Soleimani on 2020-05-06.
@@ -8,4 +8,6 @@
 
 import Foundation
 
-public protocol EngineManagerProtocol: ListManagerProtocol, ListItemManagerProtocol  {}
+public protocol ListItemManagerProtocol {
+
+}

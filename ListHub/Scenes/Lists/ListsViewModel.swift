@@ -29,9 +29,6 @@ final class ListsViewModel: ViewModelType {
       list2.itemQuantity = 4
       var list3 = ListModel(title: "Tables and 2 lines", description: "hame khubaye 2", iconId: 0, iconColor: 0x913030)
       list3.itemQuantity = 2
-      self.engine.add(List: list1, response: nil)
-      self.engine.add(List: list2, response: nil)
-      self.engine.add(List: list3, response: nil)
 ////////////
       navigator.toAddList()
     }

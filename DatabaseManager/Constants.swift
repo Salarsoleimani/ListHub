@@ -11,6 +11,8 @@ import Foundation
 enum Constants {
   struct Tags {
     static let list = "List"
-    static let icon = "Icon"
+    static let listItem = "ListItem"
+    static let inputComponent = "InputComponent"
+    static let outputComponent = "OutputComponent"
   }
 }
