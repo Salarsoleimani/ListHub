@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "name": "Input box"
+  },
+  {
+    "id": 1,
+    "name": "Phone input box"
+  },
+  {
+    "id": 2,
+    "name": "Link input box"
+  }
+]

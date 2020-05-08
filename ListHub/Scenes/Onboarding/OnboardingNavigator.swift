@@ -15,6 +15,6 @@ final class OnboardingNavigator: Navigator {
     //AnalyticLogProvider.logNavigator(name: NSStringFromClass(type(of: self)), functionName: "setup")
   }
   func toLists() {
-    ListsNavigator(navigationController: navigationController, appEngine: appEngine).setup()
+    ListsNavigator(navigationController: navigationController, servicePackage: servicePackage).setup()
   }
 }

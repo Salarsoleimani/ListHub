@@ -15,14 +15,13 @@ public struct ListModel: QuickIndexable {
   public let iconId: Int
   public let iconColor: Int
   public var itemQuantity: Int
-  //public let components: [ComponentType]?
+
   public init(title: String, description: String = "", iconId: Int, iconColor: Int) {
     self.uid = UUID()
     self.title = title
     self.description = description
-    self.itemQuantity = 1
+    self.itemQuantity = 0
     self.iconId = iconId
-//		let ali = Com
     self.iconColor = iconColor
   }
 }

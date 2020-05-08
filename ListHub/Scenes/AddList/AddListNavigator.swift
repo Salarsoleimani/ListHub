@@ -15,6 +15,6 @@ final class AddListNavigator: Navigator {
     navigationController.pushViewController(vc, animated: true)
   }
   func toIcons(delegate: AddListControllerDelegate) {
-    IconsNavigator(navigationController: navigationController, appEngine: appEngine).setup(delegate: delegate)
+    IconsNavigator(navigationController: navigationController, servicePackage: servicePackage).setup(delegate: delegate)
   }
 }

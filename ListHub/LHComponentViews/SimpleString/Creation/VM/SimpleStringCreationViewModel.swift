@@ -6,7 +6,11 @@
 //  Copyright © 2020 BEKSAS. All rights reserved.
 //
 
-import Foundation
-struct SimpleStringCreationViewModel {
-	var title: String
+import Domain
+
+protocol CreationViewModel {}
+struct SimpleStringCreationViewModel: CreationViewModel {
+//  func asInput(_ listUID: UUID) -> InputComponentType {
+//    return ComponentElements.SimpleString.Input(title: title, listUID: listUID)
+//  }
 }

@@ -11,18 +11,18 @@ import Foundation
 final class ListsNavigator: Navigator {
   func setup() {
     let vc = ListsController.initFromNib()
-    vc.viewModel = ListsViewModel(navigator: self, engine: appEngine)
+    vc.viewModel = ListsViewModel(navigator: self, dbManager: servicePackage.dbManager)
     navigationController.isNavigationBarHidden = false
     navigationController.setViewControllers([vc], animated: true)
     //AnalyticLogProvider.logNavigator(name: NSStringFromClass(type(of: self)), functionName: "setup")
   }
   func toAddList() {
-    AddListNavigator(navigationController: navigationController, appEngine: appEngine).setup()
+    AddListNavigator(navigationController: navigationController, servicePackage: servicePackage).setup()
   }
   func toList() {
     
   }
   func toSetting() {
-    SettingNavigator(navigationController: navigationController, appEngine: appEngine).setup()
+    SettingNavigator(navigationController: navigationController, servicePackage: servicePackage).setup()
   }
 }

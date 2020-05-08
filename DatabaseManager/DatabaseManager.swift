@@ -11,7 +11,7 @@ import QuickDB
 
 final public class DBManager: DatabaseManagerProtocol {
   public func add(List list: ListModel, components: [InputComponentType], response: ((Bool) -> Void)?) {
-    quickDB.insert(model: list, withTag: listTag) { (completed) in
+    quickDB.insert(model: list, withTag: listTag) { [quickDB, inputComponentTag] (completed) in
       if completed {
         for component in components {
           //quickDB.insert(model: component, withTag: inputComponentTag, completion: response)
@@ -91,8 +91,8 @@ final public class DBManager: DatabaseManagerProtocol {
   // Tags
   private let listTag = Constants.Tags.list
   private let listItemTag = Constants.Tags.listItem
-  private let inputComponent = Constants.Tags.inputComponent
-  private let outputComponent = Constants.Tags.outputComponent
+  private let inputComponentTag = Constants.Tags.inputComponent
+  private let outputComponentTag = Constants.Tags.outputComponent
 
   // MARK:- Initialization
   public init() {

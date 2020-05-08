@@ -22,4 +22,3 @@ struct IconCellViewModel {
     self.color = colorModel.getColor()
   }
 }
-

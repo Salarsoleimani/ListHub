@@ -10,12 +10,18 @@ import UIKit
 import BEKListKit
 
 class SimpleStringCreationCell: UICollectionViewCell {
-	@IBOutlet weak var titleLabel: UILabel!
-	
-	@IBOutlet weak var titleTextField: UITextField!
-	override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
+  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var titleTextField: UITextField!
+  var viewModel: SimpleStringCreationViewModel!
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
+  
+}
+// MARK:- BEKListKit
+extension SimpleStringCreationCell: BEKBindableCell {
+  typealias ViewModeltype = SimpleStringCreationViewModel
+  func bindData(withViewModel viewModel: SimpleStringCreationViewModel) {
+    self.viewModel = viewModel
+  }
 }

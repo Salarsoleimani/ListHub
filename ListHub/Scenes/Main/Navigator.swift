@@ -12,11 +12,11 @@ import AppEngine
 
 class Navigator: NSObject {
   internal let navigationController: UINavigationController
-  internal let appEngine: EngineManagerProtocol
+  internal let servicePackage: ServicePackage
 
-  init(navigationController: UINavigationController, appEngine: EngineManagerProtocol) {
+  init(navigationController: UINavigationController, servicePackage: ServicePackage) {
     self.navigationController = navigationController
-    self.appEngine = appEngine
+    self.servicePackage = servicePackage
   }
 }
 
