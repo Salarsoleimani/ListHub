@@ -10,10 +10,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddListController" customModule="ListHub" customModuleProvider="target">
             <connections>
                 <outlet property="componentsCollectionView" destination="tY8-GQ-xsA" id="LXa-pi-epb"/>
-                <outlet property="descriptionLabel" destination="bCf-0f-PPB" id="CmI-hn-QlS"/>
+                <outlet property="descriptionTextField" destination="bCf-0f-PPB" id="qA2-1U-o4Y"/>
                 <outlet property="iconButton" destination="IF4-K4-fwo" id="v7c-Lx-XZe"/>
                 <outlet property="selectedComponentsCollectionView" destination="skO-Mg-6RX" id="fE7-0y-vVw"/>
-                <outlet property="titleLabel" destination="kKr-Eb-nBK" id="2n1-E2-2dl"/>
+                <outlet property="titleTextField" destination="kKr-Eb-nBK" id="36t-4P-g3Y"/>
                 <outlet property="view" destination="YTN-FY-g2W" id="TcR-yv-5d1"/>
             </connections>
         </placeholder>

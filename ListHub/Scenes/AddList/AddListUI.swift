@@ -12,12 +12,16 @@ import BEKListKit
 extension AddListController {
   func setupUI() {
     setupSelectedComponentsCVUI()
+    setupNavigationUI()
     view.backgroundColor = LHColors.background.value
   }
   private func setupSelectedComponentsCVUI() {
     let width = StaticConstants.mainScreenWidth
     let size = CGSize(width: width , height: 100)
     selectedComponentsCollectionView.collectionViewLayout = BEKCollectionLayoutComposer.makeLayout(ForItemSize: size, minimumLineSpacing:  0, minimumInteritemSpacing: 0, estimatedItemSize: .zero, scrollDirection: .vertical)
+  }
+  private func setupNavigationUI() {
+    navigationItem.rightBarButtonItem = addListBarButton
   }
 }
 

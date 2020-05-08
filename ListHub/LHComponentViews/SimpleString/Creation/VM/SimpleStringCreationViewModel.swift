@@ -7,10 +7,27 @@
 //
 
 import Domain
+import BEKListKit
+import UIKit
 
-protocol CreationViewModel {}
-struct SimpleStringCreationViewModel: CreationViewModel {
-//  func asInput(_ listUID: UUID) -> InputComponentType {
-//    return ComponentElements.SimpleString.Input(title: title, listUID: listUID)
-//  }
+protocol CreationViewModelProtocol: Codable {
+  associatedtype CellType: BEKBindableCell, UICollectionViewCell
+  func getCell() -> BEKGenericCell.Collection<CellType>
+  func asEnum() -> CreationComponentType
+}
+struct SimpleStringCreationViewModel: CreationViewModelProtocol {
+  func asEnum() -> CreationComponentType {
+    return .simpleString(self)
+  }
+  
+  func getCell() -> BEKGenericCell.Collection<SimpleStringCreationCell> {
+    return BEKGenericCell.Collection<SimpleStringCreationCell>(viewModel: self)
+  }
+  
+  typealias CellType = SimpleStringCreationCell
+ 
+  var title: String
+  func asInput(_ listUID: UUID) -> InputComponentType {
+    return ComponentElements.SimpleString.Input(title: title, listUID: listUID)
+  }
 }

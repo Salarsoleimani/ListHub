@@ -11,4 +11,12 @@ import Foundation
 struct ComponentsModel: Codable {
   let id: Int
   let name: String
+  func asCreationComponentType() -> CreationComponentType {
+    switch id {
+    case 0:
+      return .simpleString(SimpleStringCreationViewModel(title: ""))
+    default:
+      return .simpleString(SimpleStringCreationViewModel(title: "allarin"))
+    }
+  }
 }
