@@ -22,28 +22,23 @@ final class ListsViewModel: ViewModelType {
   }
   // MARK:- Functions
   func transform(input: ListsViewModel.Input) -> ListsViewModel.Output {
-    let addListTrigger = input.addListTrigger.map { [navigator] _ -> Void in
-      //////////// [TODO] - remove muck
-      let list1 = ListModel(title: "Movie", description: "hame khuba", iconId: 1, iconColor: 0x3C6CFF)
-      var list2 = ListModel(title: "Work", description: "hame khubaye 2", iconId: 0, iconColor: 0xB933FF)
-      list2.itemQuantity = 4
-      var list3 = ListModel(title: "Tables and 2 lines", description: "hame khubaye 2", iconId: 0, iconColor: 0x913030)
-      list3.itemQuantity = 2
-      ////////////
-      navigator.toAddList()
+    let rxLists = BehaviorRelay<ListModel>(value: ListModel(title: "", iconId: 0, iconColor: ""))
+
+    let addListTrigger = input.addListTrigger.map { [rxLists, navigator] _ -> Void in
+      navigator.toAddList(rxLists)
     }
     let openSettingTrigger = input.openSettingTrigger.map { [navigator] _ -> Void in
       navigator.toSetting()
     }
     
-    let rxLists = BehaviorRelay<[ListModel]>(value: [ListModel]())
-    
     let shouldShowEmptyList = BehaviorRelay<Bool>(value: true)
     
     dbManager.get { [shouldShowWalktrough, rxLists] (lists) in
-      rxLists.accept(lists)
       lists.count == 0 ? shouldShowWalktrough.accept(true) : shouldShowWalktrough.accept(false)
-      lists.count == 0 ? shouldShowEmptyList.accept(false) : shouldShowEmptyList.accept(true)
+      lists.count == 0 ? shouldShowEmptyList.accept(true) : shouldShowEmptyList.accept(false)
+      for list in lists {
+        rxLists.accept(list)
+      }
     }
     
     return Output(addListTrigger: addListTrigger, openSettingTrigger: openSettingTrigger, lists: rxLists, shouldShowEmptyList: shouldShowEmptyList.asDriver())
@@ -59,7 +54,7 @@ extension ListsViewModel {
   struct Output {
     let addListTrigger: Driver<Void>
     let openSettingTrigger: Driver<Void>
-    let lists: BehaviorRelay<[ListModel]>
+    let lists: BehaviorRelay<ListModel>
     let shouldShowEmptyList: Driver<Bool>
   }
 }

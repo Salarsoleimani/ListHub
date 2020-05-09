@@ -6,7 +6,8 @@
 //  Copyright © 2020 BEKSAS. All rights reserved.
 //
 
-import Foundation
+import RxCocoa
+import Domain
 
 final class ListsNavigator: Navigator {
   func setup() {
@@ -16,8 +17,8 @@ final class ListsNavigator: Navigator {
     navigationController.setViewControllers([vc], animated: true)
     //AnalyticLogProvider.logNavigator(name: NSStringFromClass(type(of: self)), functionName: "setup")
   }
-  func toAddList() {
-    AddListNavigator(navigationController: navigationController, servicePackage: servicePackage).setup()
+  func toAddList(_ lists: BehaviorRelay<ListModel>) {
+    AddListNavigator(navigationController: navigationController, servicePackage: servicePackage, allLists: lists).setup()
   }
   func toList() {
     

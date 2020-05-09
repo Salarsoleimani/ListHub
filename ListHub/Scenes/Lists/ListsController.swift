@@ -55,11 +55,9 @@ class ListsController: UIViewController {
     outputs.addListTrigger.drive().disposed(by: disposeBag)
     outputs.openSettingTrigger.drive().disposed(by: disposeBag)
     outputs.lists.subscribe(onNext: { [myListsCollectionView] (lists) in
-      for list in lists {
-        let vm = ListItemViewModel(model: list)
-        let cell = BEKGenericCell.Collection<ListCell>(viewModel: vm)
-        myListsCollectionView?.push(cell: cell)
-      }
+      let vm = ListItemViewModel(model: lists)
+      let cell = BEKGenericCell.Collection<ListCell>(viewModel: vm)
+      myListsCollectionView?.push(cell: cell)
     }).disposed(by: disposeBag)
     
     outputs.shouldShowEmptyList.drive(lottieContainerView.rx.isHidden).disposed(by: disposeBag)

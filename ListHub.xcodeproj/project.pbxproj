@@ -818,8 +818,8 @@
 			children = (
 				25DD143424650120001CAE8B /* Cell */,
 				25CACD4324610FD9004E7CA7 /* Icons */,
-				25CACD39245F870B004E7CA7 /* AddListNavigator.swift */,
 				25CACD3A245F870B004E7CA7 /* AddListController.swift */,
+				25CACD39245F870B004E7CA7 /* AddListNavigator.swift */,
 				25CACD3B245F870B004E7CA7 /* AddListViewModel.swift */,
 				25CACD3C245F870B004E7CA7 /* AddListController.xib */,
 				25CACD3D245F870B004E7CA7 /* AddListUI.swift */,

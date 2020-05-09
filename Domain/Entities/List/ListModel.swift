@@ -10,13 +10,13 @@ import QuickDB
 
 public struct ListModel: QuickIndexable {
   public var uid: UUID
-  public let title: String
-  public let description: String
-  public let iconId: Int
-  public let iconColor: Int
+  public var title: String
+  public var description: String
+  public var iconId: Int
+  public var iconColor: String
   public var itemQuantity: Int
 
-  public init(title: String, description: String = "", iconId: Int, iconColor: Int) {
+  public init(title: String, description: String = "", iconId: Int, iconColor: String) {
     self.uid = UUID()
     self.title = title
     self.description = description

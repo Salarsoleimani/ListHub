@@ -7,8 +7,15 @@
 //
 
 import Foundation
+import RxCocoa
+import Domain
 
 final class AddListNavigator: Navigator {
+  private let allLists: BehaviorRelay<ListModel>
+  init(navigationController: UINavigationController, servicePackage: ServicePackage, allLists: BehaviorRelay<ListModel>) {
+    self.allLists = allLists
+    super.init(navigationController: navigationController, servicePackage: servicePackage)
+  }
   func setup() {
     let vc = AddListController.initFromNib()
     vc.viewModel = AddListViewModel(navigator: self)
@@ -16,5 +23,9 @@ final class AddListNavigator: Navigator {
   }
   func toIcons(delegate: AddListControllerDelegate) {
     IconsNavigator(navigationController: navigationController, servicePackage: servicePackage).setup(delegate: delegate)
+  }
+  func popToLists(_ newList: ListModel) {
+    allLists.accept(newList)
+    navigationController.popViewController(animated: true)
   }
 }

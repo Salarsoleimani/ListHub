@@ -16,10 +16,15 @@ final class AddListViewModel: ViewModelType {
 // MARK:- Constants
   private let navigator: AddListNavigator
   private let dbManager: DatabaseManagerProtocol
-  let listModel = ListModel(title: "", description: "", iconId: 0, iconColor: 0x363374)
+  var listModel = ListModel(title: "", description: "", iconId: 0, iconColor: "#363374")
 
 // MARK:- Variables
-  var icon: IconCellViewModel?
+  var icon: IconCellViewModel? {
+    didSet {
+      listModel.iconColor = icon!.colorModel.value
+      listModel.iconId = icon!.model.id
+    }
+  }
   // MARK:- Initialization
   init(navigator: AddListNavigator) {
     self.navigator = navigator
@@ -48,12 +53,16 @@ final class AddListViewModel: ViewModelType {
     }
     let addListTrigger = input.addListTrigger.flatMapLatest { () -> Driver<[CreationComponentType]> in
       return currentSelectedComponents
-    }.do(onNext: { [dbManager, listModel](items) in
+    }.do(onNext: { [dbManager, listModel, navigator](items) in
       let components = items.compactMap { (item) -> InputComponentType in
         return item.asInput(listUID: listModel.uid)
       }
-      dbManager.add(List: listModel, components: components, response: nil)
-      }).mapToVoid()
+      dbManager.add(List: listModel, components: components) { [navigator] (isAdded) in
+        if isAdded {
+          navigator.popToLists(listModel)
+        }
+      }
+    }).mapToVoid()
     
     return Output(iconTrigger: iconTrigger, components: allComponents, selectedComponent: selectedComponent.asObservable(), addListTrigger: addListTrigger)
   }
@@ -68,8 +77,6 @@ extension AddListViewModel {
     let iconTrigger: Driver<Void>
     let selectingComponent: Driver<ComponentsModel>
     let addListTrigger: Driver<Void>
-    let title: Driver<String>
-    let description: Driver<String>
   }
   struct Output {
     let iconTrigger: Driver<Void>

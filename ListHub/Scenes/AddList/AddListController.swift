@@ -39,7 +39,8 @@ class AddListController: UIViewController {
   private func bindData() {
     let selectedComponent = componentsCollectionView.rx.modelSelected(ComponentsModel.self).asDriver()
     
-    let inputs = AddListViewModel.Input(delegate: self, iconTrigger: iconButton.rx.tap.asDriver(), selectingComponent: selectedComponent, addListTrigger: addListBarButton.rx.tap.asDriver(), title: titleTextField.rx.text.orEmpty.asDriver(), description: descriptionTextField.rx.text.orEmpty.asDriver())
+    let inputs = AddListViewModel.Input(delegate: self, iconTrigger: iconButton.rx.tap.asDriver(), selectingComponent: selectedComponent, addListTrigger: addListBarButton.rx.tap.asDriver())
+    
     let outputs = viewModel.transform(input: inputs)
     
     outputs.iconTrigger.drive().disposed(by: disposeBag)
@@ -55,7 +56,14 @@ class AddListController: UIViewController {
       }
       
     }).disposed(by: disposeBag)
+    
     outputs.addListTrigger.drive().disposed(by: disposeBag)
+    titleTextField.rx.text.orEmpty.subscribe(onNext: { [viewModel] (titleText) in
+      viewModel?.listModel.title = titleText
+    }).disposed(by: disposeBag)
+    descriptionTextField.rx.text.orEmpty.subscribe(onNext: { [viewModel] (descText) in
+      viewModel?.listModel.description = descText
+    }).disposed(by: disposeBag)
   }
   private func registerCells() {
     let allComponentsCellXib = UINib(nibName: "AllComponentsCell", bundle: nil)
