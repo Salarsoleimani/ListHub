@@ -35,7 +35,7 @@ final class AddListViewModel: ViewModelType {
     let allComponents = Driver.just(getAllComponents())
     
     let iconTrigger = input.iconTrigger.map { [navigator] _ -> Void in
-      navigator.toIcons(delegate: input.delegate)
+      navigator.toIcons(delegate: input.delegate, icon: input.icon)
     }
     let selectedComponent = input.selectingComponent.map { (component) -> CreationComponentType? in
       
@@ -53,13 +53,13 @@ final class AddListViewModel: ViewModelType {
     }
     let addListTrigger = input.addListTrigger.flatMapLatest { () -> Driver<[CreationComponentType]> in
       return currentSelectedComponents
-    }.do(onNext: { [dbManager, listModel, navigator](items) in
+    }.do(onNext: { [dbManager, navigator](items) in
       let components = items.compactMap { (item) -> InputComponentType in
-        return item.asInput(listUID: listModel.uid)
+        return item.asInput(listUID: self.listModel.uid)
       }
-      dbManager.add(List: listModel, components: components) { [navigator] (isAdded) in
+      dbManager.add(List: self.listModel, components: components) { [navigator] (isAdded) in
         if isAdded {
-          navigator.popToLists(listModel)
+          navigator.popToLists(self.listModel)
         }
       }
     }).mapToVoid()
@@ -77,6 +77,9 @@ extension AddListViewModel {
     let iconTrigger: Driver<Void>
     let selectingComponent: Driver<ComponentsModel>
     let addListTrigger: Driver<Void>
+    let title: Driver<String>
+    let description: Driver<String>
+    let icon: BehaviorRelay<IconCellViewModel>
   }
   struct Output {
     let iconTrigger: Driver<Void>

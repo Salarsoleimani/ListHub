@@ -38,8 +38,9 @@ class AddListController: UIViewController {
   // MARK:- Functions
   private func bindData() {
     let selectedComponent = componentsCollectionView.rx.modelSelected(ComponentsModel.self).asDriver()
-    
-    let inputs = AddListViewModel.Input(delegate: self, iconTrigger: iconButton.rx.tap.asDriver(), selectingComponent: selectedComponent, addListTrigger: addListBarButton.rx.tap.asDriver())
+    let defaultIcon = BehaviorRelay<IconCellViewModel>(value:
+      IconCellViewModel(model: IconModel(id: 0, name: "", tags: [String]()), colorModel: ColorModel(id: 0, name: "green", value: "#217C6B")))
+    let inputs = AddListViewModel.Input(delegate: self, iconTrigger: iconButton.rx.tap.asDriver(), selectingComponent: selectedComponent, addListTrigger: addListBarButton.rx.tap.asDriver(), title: titleTextField.rx.text.orEmpty.asDriver(), description: descriptionTextField.rx.text.orEmpty.asDriver(), icon: defaultIcon)
     
     let outputs = viewModel.transform(input: inputs)
     
@@ -70,33 +71,8 @@ class AddListController: UIViewController {
     componentsCollectionView.register(allComponentsCellXib, forCellWithReuseIdentifier: "cellId")
   }
 }
-enum CreationComponentType {
-  case simpleString(SimpleStringCreationViewModel)
-  public init(from decoder: Decoder) throws {
-    let container = try decoder.singleValueContainer()
-    
-    if let element = try? container.decode(SimpleStringCreationViewModel.self) {
-      self = .simpleString(element)
-      return
-    }
-    
-    throw DecodingError.typeMismatch(CreationComponentType.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for CreationComponentType"))
-  }
-  func makeCell() -> BEKGenericCollectionCellType?{
-    switch self {
-    case .simpleString(let vm):
-      let cell = vm.getCell()
-      return cell
-    }
-  }
-  func asInput(listUID: UUID) -> InputComponentType{
-    switch self {
-    case .simpleString(let vm):
-      return vm.asInput(listUID)
-    }
-  }
-  
-}
+
+
 protocol AddListControllerDelegate {
   func iconSelected(_ icon: IconCellViewModel)
 }

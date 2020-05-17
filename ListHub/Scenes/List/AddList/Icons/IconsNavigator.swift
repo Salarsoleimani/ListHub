@@ -7,13 +7,15 @@
 //
 
 import Foundation
+import RxCocoa
 
 final class IconsNavigator: Navigator {
   fileprivate var iconsVC: IconsController?
   fileprivate var delegate: AddListControllerDelegate?
-  func setup(delegate: AddListControllerDelegate) {
+  func setup(delegate: AddListControllerDelegate, icon: BehaviorRelay<IconCellViewModel>) {
     iconsVC = IconsController.initFromNib()
     self.delegate = delegate
+    iconsVC!.defaultIcon = icon
     iconsVC!.viewModel = IconsViewModel(navigator: self)
     if let lastVc = navigationController.viewControllers.last {
       lastVc.present(iconsVC!, animated: true, completion: nil)

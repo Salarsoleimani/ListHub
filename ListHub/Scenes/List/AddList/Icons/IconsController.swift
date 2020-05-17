@@ -17,6 +17,7 @@ class IconsController: UIViewController {
   
   // MARK:- variables
   var viewModel: IconsViewModel!
+  var defaultIcon: BehaviorRelay<IconCellViewModel>!
   // MARK:- Constants
   let disposeBag = DisposeBag()
   

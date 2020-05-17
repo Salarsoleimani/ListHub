@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhoneNumberCreationCell" customModule="ListHub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="273" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="273" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwh-1h-Vsh">
+                        <rect key="frame" x="0.0" y="0.0" width="273" height="150"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="j8B-au-RPW">
+                                <rect key="frame" x="20" y="9" width="266" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="ngo-Dy-mX9">
+                                        <rect key="frame" x="0.0" y="0.0" width="266" height="87.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please input yout phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xp0-sb-BDn">
+                                        <rect key="frame" x="0.0" y="99.5" width="266" height="20.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="j8B-au-RPW" firstAttribute="top" secondItem="rwh-1h-Vsh" secondAttribute="top" constant="20" id="7GQ-Gj-qbh"/>
+                            <constraint firstItem="j8B-au-RPW" firstAttribute="top" secondItem="rwh-1h-Vsh" secondAttribute="top" constant="9" id="EDk-yD-i1x"/>
+                            <constraint firstAttribute="trailing" secondItem="j8B-au-RPW" secondAttribute="trailing" constant="9" id="bMn-7N-wYq"/>
+                            <constraint firstItem="j8B-au-RPW" firstAttribute="leading" secondItem="rwh-1h-Vsh" secondAttribute="leading" constant="9" id="bxk-MB-Mgj"/>
+                            <constraint firstAttribute="bottom" secondItem="j8B-au-RPW" secondAttribute="bottom" constant="20" id="jmT-mT-z8L"/>
+                            <constraint firstItem="j8B-au-RPW" firstAttribute="leading" secondItem="rwh-1h-Vsh" secondAttribute="leading" constant="20" id="ova-Eb-k0x"/>
+                            <constraint firstAttribute="trailing" secondItem="j8B-au-RPW" secondAttribute="trailing" constant="20" id="pRD-Mt-HDd"/>
+                            <constraint firstAttribute="bottom" secondItem="j8B-au-RPW" secondAttribute="bottom" constant="9" id="td6-gp-znC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rwh-1h-Vsh" secondAttribute="bottom" id="JPV-Pb-0yT"/>
+                <constraint firstAttribute="trailing" secondItem="rwh-1h-Vsh" secondAttribute="trailing" id="WvY-3d-cAe"/>
+                <constraint firstItem="rwh-1h-Vsh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kwB-V7-uEj"/>
+                <constraint firstItem="rwh-1h-Vsh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qYL-hC-eoc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="273" height="150"/>
+            <connections>
+                <outlet property="titleLabel" destination="xp0-sb-BDn" id="uBt-uY-1bi"/>
+                <outlet property="titleTextField" destination="ngo-Dy-mX9" id="pAg-n3-qL2"/>
+            </connections>
+            <point key="canvasLocation" x="299.27536231884062" y="155.35714285714286"/>
+        </collectionViewCell>
+    </objects>
+</document>

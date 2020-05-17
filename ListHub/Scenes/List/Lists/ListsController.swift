@@ -54,7 +54,7 @@ class ListsController: UIViewController {
     
     outputs.addListTrigger.drive().disposed(by: disposeBag)
     outputs.openSettingTrigger.drive().disposed(by: disposeBag)
-    outputs.lists.subscribe(onNext: { [myListsCollectionView] (lists) in
+    outputs.lists.asObservable().subscribe(onNext: { [myListsCollectionView] (lists) in
       let vm = ListItemViewModel(model: lists)
       let cell = BEKGenericCell.Collection<ListCell>(viewModel: vm)
       myListsCollectionView?.push(cell: cell)

@@ -10,11 +10,7 @@ import Domain
 import BEKListKit
 import UIKit
 
-protocol CreationViewModelProtocol: Codable {
-  associatedtype CellType: BEKBindableCell, UICollectionViewCell
-  func getCell() -> BEKGenericCell.Collection<CellType>
-  func asEnum() -> CreationComponentType
-}
+
 struct SimpleStringCreationViewModel: CreationViewModelProtocol {
   func asEnum() -> CreationComponentType {
     return .simpleString(self)

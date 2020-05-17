@@ -8,6 +8,7 @@
 
 import Domain
 import RxCocoa
+import RxSwift
 
 final class ListsViewModel: ViewModelType {
   // MARK:- Constants
@@ -30,18 +31,21 @@ final class ListsViewModel: ViewModelType {
     let openSettingTrigger = input.openSettingTrigger.map { [navigator] _ -> Void in
       navigator.toSetting()
     }
-    
     let shouldShowEmptyList = BehaviorRelay<Bool>(value: true)
     
     dbManager.get { [shouldShowWalktrough, rxLists] (lists) in
       lists.count == 0 ? shouldShowWalktrough.accept(true) : shouldShowWalktrough.accept(false)
-      lists.count == 0 ? shouldShowEmptyList.accept(true) : shouldShowEmptyList.accept(false)
+      lists.count == 0 ? shouldShowEmptyList.accept(false) : shouldShowEmptyList.accept(true)
       for list in lists {
         rxLists.accept(list)
       }
     }
     
-    return Output(addListTrigger: addListTrigger, openSettingTrigger: openSettingTrigger, lists: rxLists, shouldShowEmptyList: shouldShowEmptyList.asDriver())
+    let newList = rxLists.do(onNext: { [shouldShowEmptyList] _ in
+      shouldShowEmptyList.accept(true)
+    })
+    
+    return Output(addListTrigger: addListTrigger, openSettingTrigger: openSettingTrigger, lists: newList.asObservable().skip(1), shouldShowEmptyList: shouldShowEmptyList.asDriver())
   }
 }
 // MARK:- Inputs & Outputs
@@ -54,7 +58,7 @@ extension ListsViewModel {
   struct Output {
     let addListTrigger: Driver<Void>
     let openSettingTrigger: Driver<Void>
-    let lists: BehaviorRelay<ListModel>
+    let lists: Observable<ListModel>
     let shouldShowEmptyList: Driver<Bool>
   }
 }

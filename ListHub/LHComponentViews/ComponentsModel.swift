@@ -15,8 +15,10 @@ struct ComponentsModel: Codable {
     switch id {
     case 0:
       return .simpleString(SimpleStringCreationViewModel(title: ""))
+    case 1:
+      return .phoneNumber(PhoneNumberCreationViewModel(title: ""))
     default:
-      return .simpleString(SimpleStringCreationViewModel(title: "allarin"))
+      fatalError()
     }
   }
 }

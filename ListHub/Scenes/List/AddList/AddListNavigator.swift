@@ -21,8 +21,8 @@ final class AddListNavigator: Navigator {
     vc.viewModel = AddListViewModel(navigator: self)
     navigationController.pushViewController(vc, animated: true)
   }
-  func toIcons(delegate: AddListControllerDelegate) {
-    IconsNavigator(navigationController: navigationController, servicePackage: servicePackage).setup(delegate: delegate)
+  func toIcons(delegate: AddListControllerDelegate, icon: BehaviorRelay<IconCellViewModel>) {
+    IconsNavigator(navigationController: navigationController, servicePackage: servicePackage).setup(delegate: delegate, icon: icon)
   }
   func popToLists(_ newList: ListModel) {
     allLists.accept(newList)
