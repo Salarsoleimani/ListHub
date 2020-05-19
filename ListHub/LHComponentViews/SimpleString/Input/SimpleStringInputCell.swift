@@ -17,7 +17,7 @@ class SimpleStringInputCell: UICollectionViewCell {
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
+  }
 }
 
 extension SimpleStringInputCell: BEKBindableCell {

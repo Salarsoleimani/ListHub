@@ -8,19 +8,32 @@
 
 import Foundation
 import Domain
+import RxCocoa
+import BEKListKit
 
 final class AddItemViewModel: ViewModelType {
 // MARK:- Constants
   private let navigator: AddItemNavigator
+  private let dbManager: DatabaseManagerProtocol
+  private let listId: UUID
 // MARK:- Initialization
-  init(navigator: AddItemNavigator) {
+  init(navigator: AddItemNavigator, dbManager: DatabaseManagerProtocol, listId: UUID) {
     self.navigator = navigator
+    self.dbManager = dbManager
+    self.listId = listId
   }
 // MARK:- Functions
   func transform(input: AddItemViewModel.Input) -> AddItemViewModel.Output {
-
-    return Output()
+    let inputCells = BehaviorRelay<[BEKGenericCollectionCellType]>(value: [BEKGenericCollectionCellType]())
+    dbManager.get(InputComponentsForListUID: listId) { [inputCells] (inputs) in
+      let inputCell = inputs.compactMap { (input) -> BEKGenericCollectionCellType in
+        return input.asEnum().getCell()
+      }
+      inputCells.accept(inputCell)
+    }
+    return Output(inputCells: inputCells.asDriver())
   }
+  
 }
 // MARK:- Inputs & Outputs
 extension AddItemViewModel {
@@ -28,6 +41,6 @@ extension AddItemViewModel {
 
   }
   struct Output {
-
+    let inputCells: Driver<[BEKGenericCollectionCellType]>
   }
 }

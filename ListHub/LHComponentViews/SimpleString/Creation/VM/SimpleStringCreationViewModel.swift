@@ -26,4 +26,6 @@ struct SimpleStringCreationViewModel: CreationViewModelProtocol {
   func asInput(_ listUID: UUID) -> InputComponentType {
     return ComponentElements.SimpleString.Input(title: title, listUID: listUID)
   }
+  
+  
 }

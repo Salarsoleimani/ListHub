@@ -7,12 +7,28 @@
 //
 
 import UIKit
+import BEKListKit
+import RxSwift
 
 class PhoneNumberInputCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
+  
+  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var titleTextField: UITextField!
+  let disposeBag = DisposeBag()
+  var viewModel: PhoneNumberInputViewModel!
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+  }
+  
+}
+// MARK:- BEKListKit
+extension PhoneNumberInputCell: BEKBindableCell {
+  typealias ViewModeltype = PhoneNumberInputViewModel
+  func bindData(withViewModel viewModel: PhoneNumberInputViewModel) {
+    self.viewModel = viewModel
+    titleTextField.rx.text.orEmpty.subscribe(onNext: { [unowned self] (text) in
+      self.viewModel.title = text
+    }).disposed(by: disposeBag)
+  }
 }

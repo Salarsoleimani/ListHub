@@ -11,15 +11,23 @@ import QuickDB
 
 final public class DBManager: DatabaseManagerProtocol {
   public func add(List list: ListModel, components: [InputComponentType], response: ((Bool) -> Void)?) {
-    quickDB.insert(model: list, withTag: listTag) { [quickDB, inputComponentTag, response] (completed) in
+    quickDB.insert(model: list, withTag: listTag) { [insert, response] (completed) in
       if completed {
+        for component in components {
+          insert(component.asEnum())
+        }
         if response != nil {
           response!(true)
         }
-        for component in components {
-          //quickDB.insert(model: component, withTag: inputComponentTag, completion: response)
-        }
       }
+    }
+  }
+  private func insert(inputType: ComponentType.Inputs) {
+    switch inputType {
+    case .simpleString(let type):
+      quickDB.insert(model: type, withTag: simpleStringInputComponentTag)
+    case .phoneNumber(let type):
+      quickDB.insert(model: type, withTag: phoneNumberInputComponentTag)
     }
   }
   
@@ -68,7 +76,11 @@ final public class DBManager: DatabaseManagerProtocol {
   }
   
   public func get(InputComponentsForListUID: UUID, response: @escaping ([InputComponentType]) -> Void) {
-    //quickDB.getAll(TagsMatchedWithItems: <#T##[String]?#>, LatestObjects: <#T##([Decodable]) -> Void#>, error: <#T##(Error) -> Void#>)
+    quickDB.getAll(TagsMatchedWithItems: [simpleStringInputComponentTag, phoneNumberInputComponentTag], LatestObjects: { (items: [QuickIndexable]) in
+      
+    }) { (err) in
+      
+    }
   }
   
   public func get(OutputComponentsForItemUID: UUID, response: @escaping ([OutputComponentType]) -> Void) {
@@ -94,7 +106,8 @@ final public class DBManager: DatabaseManagerProtocol {
   // Tags
   private let listTag = Constants.Tags.list
   private let listItemTag = Constants.Tags.listItem
-  private let inputComponentTag = Constants.Tags.inputComponent
+  private let simpleStringInputComponentTag = Constants.Tags.simpleStringTag
+  private let phoneNumberInputComponentTag = Constants.Tags.phoneNumberTag
   private let outputComponentTag = Constants.Tags.outputComponent
 
   // MARK:- Initialization

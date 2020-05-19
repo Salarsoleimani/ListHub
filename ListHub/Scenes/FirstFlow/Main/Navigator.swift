@@ -8,7 +8,6 @@
 
 import UIKit
 import Domain
-import AppEngine
 
 class Navigator: NSObject {
   internal let navigationController: UINavigationController

@@ -12,7 +12,8 @@ enum Constants {
   struct Tags {
     static let list = "List"
     static let listItem = "ListItem"
-    static let inputComponent = "InputComponent"
+    static let simpleStringTag = "SimpleStringComponent"
+    static let phoneNumberTag = "PhoneNumberComponent"
     static let outputComponent = "OutputComponent"
   }
 }

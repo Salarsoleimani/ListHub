@@ -20,8 +20,8 @@ final class ListsNavigator: Navigator {
   func toAddList(_ lists: BehaviorRelay<ListModel>) {
     AddListNavigator(navigationController: navigationController, servicePackage: servicePackage, allLists: lists).setup()
   }
-  func toList() {
-    
+  func toListItems(listId: UUID) {
+    ItemsNavigator(navigationController: navigationController, servicePackage: servicePackage).setup(listId)
   }
   func toSetting() {
     SettingNavigator(navigationController: navigationController, servicePackage: servicePackage).setup()

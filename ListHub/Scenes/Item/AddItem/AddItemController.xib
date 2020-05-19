@@ -6,8 +6,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddItemController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddItemController" customModule="ListHub" customModuleProvider="target">
             <connections>
+                <outlet property="inputComponentsCollectionView" destination="SUR-Cr-RMg" id="S6i-Ff-igC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,7 +16,25 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SUR-Cr-RMg" customClass="BEKMultiCellCollection" customModule="BEKListKit">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QA6-aL-xsQ">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SUR-Cr-RMg" secondAttribute="trailing" id="0QJ-3u-mzM"/>
+                <constraint firstAttribute="bottom" secondItem="SUR-Cr-RMg" secondAttribute="bottom" id="5gc-HO-PU9"/>
+                <constraint firstItem="SUR-Cr-RMg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Nf6-Wu-NS5"/>
+                <constraint firstItem="SUR-Cr-RMg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vCS-Bx-s0e"/>
+            </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>

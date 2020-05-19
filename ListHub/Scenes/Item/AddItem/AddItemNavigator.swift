@@ -9,9 +9,9 @@
 import Foundation
 
 final class AddItemNavigator: Navigator {
-  func setup() {
+  func setup(_ listId: UUID) {
     let vc = AddItemController.initFromNib()
-    vc.viewModel = AddItemViewModel(navigator: self)
+    vc.viewModel = AddItemViewModel(navigator: self, dbManager: servicePackage.dbManager, listId: listId)
     navigationController.pushViewController(vc, animated: true)
   }
 }

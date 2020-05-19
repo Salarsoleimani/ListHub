@@ -7,19 +7,21 @@
 //
 
 import Foundation
+import QuickDB
+
 public protocol ComponentTypeProtocol {
 	associatedtype Input: InputComponentType
 	associatedtype Output: OutputComponentType
 }
 
 public protocol InputComponentType {
+  var listUID: UUID { get }
 	func asEnum() -> ComponentType.Inputs
-	var listUID: UUID { get }
 }
 public protocol OutputComponentType {
 	func asEnum() -> ComponentType.Outputs
 	var itemUID: UUID { get }
 }
-public protocol ToInputConvertable {
-	func asInput() -> InputComponentType
-}
+//public protocol ToInputConvertable {
+//	func asInput() -> InputComponentType
+//}

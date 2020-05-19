@@ -11,10 +11,11 @@ import BEKListKit
 import RxSwift
 import AMScrollingNavbar
 import MaterialShowcase
+import Domain
 
 class ListsController: UIViewController {
   // MARK:- Outlets
-  @IBOutlet weak var myListsCollectionView: BEKMultiCellCollection!
+  @IBOutlet weak var myListsCollectionView: UICollectionView!
   
   @IBOutlet weak var lottieContainerView: UIView!
   @IBOutlet weak var lottieLabel: UILabel!
@@ -33,6 +34,7 @@ class ListsController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
+    registerCells()
     setupDelegates()
     bindData()
     followNavHideWhenScrolling(true)
@@ -49,18 +51,26 @@ class ListsController: UIViewController {
   
   // MARK:- Functions
   private func bindData() {
-    let inputs = ListsViewModel.Input(selectedList: myListsCollectionView.rx.itemSelected.asDriver(), addListTrigger: addListBarButton.rx.tap.asDriver(), openSettingTrigger: settingBarButton.rx.tap.asDriver())
+    let viewApearTrigger = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:))).mapToVoid().asDriverOnErrorJustComplete()
+    let inputs = ListsViewModel.Input(selectedList: myListsCollectionView.rx.modelSelected(ListModel.self).asDriver(), addListTrigger: addListBarButton.rx.tap.asDriver(), openSettingTrigger: settingBarButton.rx.tap.asDriver(), viewApearTrigger: viewApearTrigger)
     let outputs = viewModel.transform(input: inputs)
     
-    outputs.addListTrigger.drive().disposed(by: disposeBag)
-    outputs.openSettingTrigger.drive().disposed(by: disposeBag)
-    outputs.lists.asObservable().subscribe(onNext: { [myListsCollectionView] (lists) in
-      let vm = ListItemViewModel(model: lists)
-      let cell = BEKGenericCell.Collection<ListCell>(viewModel: vm)
-      myListsCollectionView?.push(cell: cell)
-    }).disposed(by: disposeBag)
+    outputs.addList.drive().disposed(by: disposeBag)
+    outputs.openSetting.drive().disposed(by: disposeBag)
+    
+    outputs.lists.drive(myListsCollectionView.rx.items(cellIdentifier: "cellId", cellType: ListCell.self)) { item, viewModel, cell in
+      let vm = ListItemViewModel(model: viewModel)
+      cell.bindData(withViewModel: vm)
+    }.disposed(by: disposeBag)
+    
     
     outputs.shouldShowEmptyList.drive(lottieContainerView.rx.isHidden).disposed(by: disposeBag)
+    outputs.openListItem.drive().disposed(by: disposeBag)
+  }
+  
+  private func registerCells() {
+     let myListssCellXib = UINib(nibName: "ListCell", bundle: nil)
+     myListsCollectionView.register(myListssCellXib, forCellWithReuseIdentifier: "cellId")
   }
   
   private func setupDelegates() {

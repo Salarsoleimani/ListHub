@@ -12,7 +12,7 @@ import Domain
 extension ComponentType.Inputs {
 	func asViewModel() throws -> PhoneNumberInputViewModel {
 		if case let ComponentType.Inputs.phoneNumber(item) = self {
-			return PhoneNumberInputViewModel(titleName: item.title)
+			return PhoneNumberInputViewModel(model: item)
 		}
 		let error = NSError().compose(domain: "ComponentType.Inputs.asViewModel()", code: -1, message: "Can't find simpleString type")
 		throw error

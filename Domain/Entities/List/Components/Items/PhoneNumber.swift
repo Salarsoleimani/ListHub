@@ -13,12 +13,13 @@ public extension ComponentElements {
 	enum PhoneNumber: ComponentTypeProtocol {
 		
 		//MARK: - Input component of Phone Number
-		public struct Input: Codable, InputComponentType {
-
+		public struct Input: QuickIndexable, InputComponentType {
+      public let uid: UUID
 			public let title: String
 			public var listUID: UUID
 			
 			public init(title: String, listUID: UUID) {
+        self.uid = UUID()
 				self.title = title
 				self.listUID = listUID
 			}
@@ -26,9 +27,7 @@ public extension ComponentElements {
 				return ComponentType.Inputs.phoneNumber(self)
 			}
 		}
-		
-		
-		
+    
 		//MARK: - Output component of Phone Number
 		public struct Output: Codable, OutputComponentType {
 			

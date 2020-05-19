@@ -55,18 +55,19 @@
 		250DAB8D24593425006C8895 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250DAB8B24593425006C8895 /* ListCell.xib */; };
 		250DAB8F24593437006C8895 /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB8E24593437006C8895 /* ListItemViewModel.swift */; };
 		250DAB91245A94A0006C8895 /* LHFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DAB90245A94A0006C8895 /* LHFonts.swift */; };
-		250F695B2471157200924D11 /* CreationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F695A2471157200924D11 /* CreationViewModelProtocol.swift */; };
+		250F695B2471157200924D11 /* LHComponentViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F695A2471157200924D11 /* LHComponentViewModelProtocol.swift */; };
 		250F695D247115BD00924D11 /* CreationComponentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F695C247115BD00924D11 /* CreationComponentType.swift */; };
 		250F6968247116CB00924D11 /* ItemsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F6963247116CB00924D11 /* ItemsNavigator.swift */; };
 		250F6969247116CB00924D11 /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F6964247116CB00924D11 /* ItemsController.swift */; };
 		250F696A247116CB00924D11 /* ItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F6965247116CB00924D11 /* ItemsViewModel.swift */; };
-		250F696B247116CB00924D11 /* ItemsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F6966247116CB00924D11 /* ItemsUI.swift */; };
+		250F696B247116CB00924D11 /* ItemsControllerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F6966247116CB00924D11 /* ItemsControllerUI.swift */; };
 		250F696C247116CB00924D11 /* ItemsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250F6967247116CB00924D11 /* ItemsController.xib */; };
 		250F6972247116DA00924D11 /* AddItemNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F696D247116DA00924D11 /* AddItemNavigator.swift */; };
 		250F6973247116DA00924D11 /* AddItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F696E247116DA00924D11 /* AddItemController.swift */; };
 		250F6974247116DA00924D11 /* AddItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F696F247116DA00924D11 /* AddItemViewModel.swift */; };
-		250F6975247116DA00924D11 /* AddItemUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F6970247116DA00924D11 /* AddItemUI.swift */; };
+		250F6975247116DA00924D11 /* AddItemControllerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F6970247116DA00924D11 /* AddItemControllerUI.swift */; };
 		250F6976247116DA00924D11 /* AddItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250F6971247116DA00924D11 /* AddItemController.xib */; };
+		250F697B247451BF00924D11 /* InputComponentTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F697A247451BF00924D11 /* InputComponentTypeExtensions.swift */; };
 		2551B726245BC6E000BB3689 /* Empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 2551B725245BC6E000BB3689 /* Empty.json */; };
 		25C082E724457EF0001578D1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C082E624457EF0001578D1 /* CloudKit.framework */; };
 		25C082F124457F67001578D1 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 25C082EF24457F67001578D1 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -245,18 +246,19 @@
 		250DAB8B24593425006C8895 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		250DAB8E24593437006C8895 /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
 		250DAB90245A94A0006C8895 /* LHFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHFonts.swift; sourceTree = "<group>"; };
-		250F695A2471157200924D11 /* CreationViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewModelProtocol.swift; sourceTree = "<group>"; };
+		250F695A2471157200924D11 /* LHComponentViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHComponentViewModelProtocol.swift; sourceTree = "<group>"; };
 		250F695C247115BD00924D11 /* CreationComponentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationComponentType.swift; sourceTree = "<group>"; };
 		250F6963247116CB00924D11 /* ItemsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsNavigator.swift; sourceTree = "<group>"; };
 		250F6964247116CB00924D11 /* ItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
 		250F6965247116CB00924D11 /* ItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewModel.swift; sourceTree = "<group>"; };
-		250F6966247116CB00924D11 /* ItemsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsUI.swift; sourceTree = "<group>"; };
+		250F6966247116CB00924D11 /* ItemsControllerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsControllerUI.swift; sourceTree = "<group>"; };
 		250F6967247116CB00924D11 /* ItemsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsController.xib; sourceTree = "<group>"; };
 		250F696D247116DA00924D11 /* AddItemNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemNavigator.swift; sourceTree = "<group>"; };
 		250F696E247116DA00924D11 /* AddItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemController.swift; sourceTree = "<group>"; };
 		250F696F247116DA00924D11 /* AddItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewModel.swift; sourceTree = "<group>"; };
-		250F6970247116DA00924D11 /* AddItemUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemUI.swift; sourceTree = "<group>"; };
+		250F6970247116DA00924D11 /* AddItemControllerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemControllerUI.swift; sourceTree = "<group>"; };
 		250F6971247116DA00924D11 /* AddItemController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemController.xib; sourceTree = "<group>"; };
+		250F697A247451BF00924D11 /* InputComponentTypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputComponentTypeExtensions.swift; sourceTree = "<group>"; };
 		2551B725245BC6E000BB3689 /* Empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Empty.json; sourceTree = "<group>"; };
 		25C082E424457EEA001578D1 /* List Hub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "List Hub.entitlements"; sourceTree = "<group>"; };
 		25C082E624457EF0001578D1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -519,7 +521,8 @@
 		13CDB238245D653D00749829 /* LHComponentViews */ = {
 			isa = PBXGroup;
 			children = (
-				250F695A2471157200924D11 /* CreationViewModelProtocol.swift */,
+				250F69772474493D00924D11 /* Extensions */,
+				250F695A2471157200924D11 /* LHComponentViewModelProtocol.swift */,
 				250F695C247115BD00924D11 /* CreationComponentType.swift */,
 				25DD14302464F603001CAE8B /* ComponentsModel.swift */,
 				25DD142E2464F4F0001CAE8B /* Components.json */,
@@ -662,7 +665,7 @@
 				250F696D247116DA00924D11 /* AddItemNavigator.swift */,
 				250F696E247116DA00924D11 /* AddItemController.swift */,
 				250F696F247116DA00924D11 /* AddItemViewModel.swift */,
-				250F6970247116DA00924D11 /* AddItemUI.swift */,
+				250F6970247116DA00924D11 /* AddItemControllerUI.swift */,
 				250F6971247116DA00924D11 /* AddItemController.xib */,
 			);
 			path = AddItem;
@@ -674,7 +677,7 @@
 				250F6963247116CB00924D11 /* ItemsNavigator.swift */,
 				250F6964247116CB00924D11 /* ItemsController.swift */,
 				250F6965247116CB00924D11 /* ItemsViewModel.swift */,
-				250F6966247116CB00924D11 /* ItemsUI.swift */,
+				250F6966247116CB00924D11 /* ItemsControllerUI.swift */,
 				250F6967247116CB00924D11 /* ItemsController.xib */,
 			);
 			path = Items;
@@ -701,6 +704,14 @@
 				25C08325244587EC001578D1 /* Main */,
 			);
 			path = FirstFlow;
+			sourceTree = "<group>";
+		};
+		250F69772474493D00924D11 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				250F697A247451BF00924D11 /* InputComponentTypeExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2551B727245BC6ED00BB3689 /* Lottie */ = {
@@ -1342,7 +1353,7 @@
 				13CDB247245D6B3D00749829 /* SimpleStringOutputCell.swift in Sources */,
 				25C0831E24458496001578D1 /* UserDefaults.swift in Sources */,
 				13CDB23E245D66CE00749829 /* SimpleStringInputCell.swift in Sources */,
-				250F6975247116DA00924D11 /* AddItemUI.swift in Sources */,
+				250F6975247116DA00924D11 /* AddItemControllerUI.swift in Sources */,
 				25CACD57246113E3004E7CA7 /* IconCell.swift in Sources */,
 				13866D05246307DD00AC4AB5 /* SimpleStringCreationViewModel.swift in Sources */,
 				13CDB254245D759E00749829 /* Error+Composer.swift in Sources */,
@@ -1353,7 +1364,7 @@
 				250DAB8824592E9B006C8895 /* IconModel.swift in Sources */,
 				25C08315244583B8001578D1 /* Vibrator.swift in Sources */,
 				13B6C5FC2443B136006BE51D /* AppDelegate.swift in Sources */,
-				250F695B2471157200924D11 /* CreationViewModelProtocol.swift in Sources */,
+				250F695B2471157200924D11 /* LHComponentViewModelProtocol.swift in Sources */,
 				139E4B25245EACF40048FD4B /* ComponentType+PhoneNumber.swift in Sources */,
 				25CACD4A24610FE9004E7CA7 /* IconsController.swift in Sources */,
 				25E0DF7C2457E5610061C293 /* ObservableExtensions.swift in Sources */,
@@ -1363,7 +1374,7 @@
 				25CACD5B246113F0004E7CA7 /* ColorCell.swift in Sources */,
 				25C0830C2445817B001578D1 /* ListHubColor.swift in Sources */,
 				25E0DF862457F6E50061C293 /* SettingController.swift in Sources */,
-				250F696B247116CB00924D11 /* ItemsUI.swift in Sources */,
+				250F696B247116CB00924D11 /* ItemsControllerUI.swift in Sources */,
 				13866D022463056500AC4AB5 /* SimpleStringCreationCell.swift in Sources */,
 				25E0DF762457DE490061C293 /* OnboardingViewModel.swift in Sources */,
 				25C0833B24458AC0001578D1 /* ListsViewModel.swift in Sources */,
@@ -1380,6 +1391,7 @@
 				25E0DF892457F7150061C293 /* SettingUI.swift in Sources */,
 				13B6C5FE2443B136006BE51D /* SceneDelegate.swift in Sources */,
 				25CACD40245F870B004E7CA7 /* AddListViewModel.swift in Sources */,
+				250F697B247451BF00924D11 /* InputComponentTypeExtensions.swift in Sources */,
 				250DAB91245A94A0006C8895 /* LHFonts.swift in Sources */,
 				25E0DF6F245783630061C293 /* OnboardingCell.swift in Sources */,
 				25C08320244584B8001578D1 /* Defaults.swift in Sources */,

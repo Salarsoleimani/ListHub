@@ -28,9 +28,7 @@ public extension ComponentElements {
 				return ComponentType.Inputs.simpleString(self)
 			}
 		}
-		
-		
-		
+    
 		//MARK: - Output component of Simple String
     public struct Output: QuickIndexable, OutputComponentType {
       public let uid: UUID

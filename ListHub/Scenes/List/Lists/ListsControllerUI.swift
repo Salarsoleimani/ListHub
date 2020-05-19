@@ -37,7 +37,12 @@ extension ListsController {
   private func setupCollectionView() {
     let width = (StaticConstants.mainScreenWidth - 40) / 2
     let size = CGSize(width: width , height: width * 1.1)
-    myListsCollectionView.collectionViewLayout = BEKCollectionLayoutComposer.makeLayout(ForItemSize: size, minimumLineSpacing:  8, minimumInteritemSpacing: 8, estimatedItemSize: .zero, scrollDirection: .vertical)
+    let layout = UICollectionViewFlowLayout()
+    layout.itemSize = size
+    layout.scrollDirection = .vertical
+    layout.minimumLineSpacing = 8
+    layout.minimumInteritemSpacing = 8
+    myListsCollectionView.collectionViewLayout = layout
   }
   
   private func setupLottie() {
