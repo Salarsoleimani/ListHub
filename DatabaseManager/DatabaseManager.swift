@@ -76,11 +76,11 @@ final public class DBManager: DatabaseManagerProtocol {
   }
   
   public func get(InputComponentsForListUID: UUID, response: @escaping ([InputComponentType]) -> Void) {
-    quickDB.getAll(TagsMatchedWithItems: [simpleStringInputComponentTag, phoneNumberInputComponentTag], LatestObjects: { (items: [QuickIndexable]) in
-      
-    }) { (err) in
-      
-    }
+		quickDB.getAll(TagsMatchedWithItems: [simpleStringInputComponentTag], LatestObjects: { (items: [ComponentElements.SimpleString.Input]) in
+			
+		}) { (error) in
+			
+		}
   }
   
   public func get(OutputComponentsForItemUID: UUID, response: @escaping ([OutputComponentType]) -> Void) {
