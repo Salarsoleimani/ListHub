@@ -15,6 +15,7 @@ class PhoneNumberCreationCell: UICollectionViewCell {
   @IBOutlet weak var titleTextField: UITextField!
   var viewModel: PhoneNumberCreationViewModel!
   let disposeBag = DisposeBag()
+  
   override func awakeFromNib() {
     super.awakeFromNib()
   }

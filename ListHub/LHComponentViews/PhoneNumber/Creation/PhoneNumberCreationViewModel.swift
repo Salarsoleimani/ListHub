@@ -20,9 +20,9 @@ struct PhoneNumberCreationViewModel: CreationViewModelProtocol {
   func getCell() -> BEKGenericCell.Collection<PhoneNumberCreationCell> {
     return BEKGenericCell.Collection<PhoneNumberCreationCell>(viewModel: self)
   }
-  
   var title: String
+  
   func asInput(_ listUID: UUID) -> InputComponentType {
-    return ComponentElements.PhoneNumber.Input(title: title, listUID: listUID)
+    return ComponentElements.PhoneNumber.Input(placeHolderTitle: title, listUID: listUID)
   }
 }

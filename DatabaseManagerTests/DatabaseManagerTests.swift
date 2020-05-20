@@ -16,17 +16,20 @@ class DatabaseManagerTests: XCTestCase {
 	var manager: DBManager?
 	
 	override func setUp() {
-		manager = DBManager()
+    manager = DBManager()
+    manager?.resetFactory()
 	}
 	
 	override func tearDown() {
+    manager?.resetFactory()
 		manager = nil
 	}
+  
 	func testAddAListWithComponents() {
 		let list = ListModel(title: "Test", iconId: -1, iconColor: "Gray")
 		let components: [InputComponentType] = [
 			ComponentElements.SimpleString.Input(title: "title1", listUID: list.uid),
-			ComponentElements.PhoneNumber.Input(title: "title2", listUID: list.uid),
+			ComponentElements.PhoneNumber.Input(placeHolderTitle: "title2", listUID: list.uid),
 			ComponentElements.SimpleString.Input(title: "title3", listUID: list.uid),
 			ComponentElements.SimpleString.Input(title: "title4", listUID: list.uid)
 		]

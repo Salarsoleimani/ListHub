@@ -3,4 +3,70 @@
    uuid = "2FA54CA9-D9E5-4ED2-8DC2-6762456AD352"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AFD4B30C-FB59-42E2-B203-A76D6465F16A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ListHub/Scenes/Item/AddItem/AddItemViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "transform(input:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AFD4B30C-FB59-42E2-B203-A76D6465F16A - 65d7fea1aa4038c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Domain.InputComponentType&gt;) -&gt; () in ListHub.AddItemViewModel.transform(input: ListHub.AddItemViewModel.Input) -&gt; ListHub.AddItemViewModel.Output"
+                  moduleName = "ListHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salarsoleimani/Workspace/iOS/listhub/ListHub/Scenes/Item/AddItem/AddItemViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  uuid = "AFD4B30C-FB59-42E2-B203-A76D6465F16A - 77826e4158283021"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Domain.InputComponentType) -&gt; BEKListKit.BEKGenericCollectionCellType in closure #1 (Swift.Array&lt;Domain.InputComponentType&gt;) -&gt; () in ListHub.AddItemViewModel.transform(input: ListHub.AddItemViewModel.Input) -&gt; ListHub.AddItemViewModel.Output"
+                  moduleName = "ListHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/salarsoleimani/Workspace/iOS/listhub/ListHub/Scenes/Item/AddItem/AddItemViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "71">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E65BBB67-F644-4DF0-9B45-5BCE38C242A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ListHub/Scenes/List/AddList/AddListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "transform(input:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

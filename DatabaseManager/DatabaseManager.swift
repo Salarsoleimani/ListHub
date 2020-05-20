@@ -14,7 +14,7 @@ final public class DBManager: DatabaseManagerProtocol {
     quickDB.insert(model: list, withTag: listTag) { [insert, response] (completed) in
       if completed {
         for component in components {
-          insert(component.asEnum())
+          insert(component.asEnum(), list.uid.uuidString)
         }
         if response != nil {
           response!(true)
@@ -22,12 +22,12 @@ final public class DBManager: DatabaseManagerProtocol {
       }
     }
   }
-  private func insert(inputType: ComponentType.Inputs) {
+  private func insert(inputType: ComponentType.Inputs, listId: String) {
     switch inputType {
     case .simpleString(let type):
-      quickDB.insert(model: type, withTag: simpleStringInputComponentTag)
+      quickDB.insert(model: type, withTag: listId)
     case .phoneNumber(let type):
-      quickDB.insert(model: type, withTag: phoneNumberInputComponentTag)
+      quickDB.insert(model: type, withTag: listId)
     }
   }
   
@@ -76,10 +76,16 @@ final public class DBManager: DatabaseManagerProtocol {
   }
   
   public func get(InputComponentsForListUID: UUID, response: @escaping ([InputComponentType]) -> Void) {
-		quickDB.getAll(TagsMatchedWithItems: [simpleStringInputComponentTag], LatestObjects: { (items: [ComponentElements.SimpleString.Input]) in
-			
+    quickDB.getAll(TagsMatchedWithItems: [InputComponentsForListUID.uuidString], LatestObjects: { (simpleStringItems: [ComponentElements.SimpleString.Input]) in
+      quickDB.getAll(TagsMatchedWithItems: [InputComponentsForListUID.uuidString], LatestObjects: { (phoneNumStringItems: [ComponentElements.PhoneNumber.Input]) in
+        var lastResponse: [InputComponentType] = simpleStringItems
+        lastResponse.append(contentsOf: phoneNumStringItems)
+        response(lastResponse)
+      }) { (error) in
+        print("error on getting phoneString: \(error)")
+      }
 		}) { (error) in
-			
+      print("error on getting simpleString: \(error)")
 		}
   }
   
@@ -114,7 +120,9 @@ final public class DBManager: DatabaseManagerProtocol {
   public init() {
     self.quickDB = QuickDB.shared
   }
-
+  public func resetFactory() {
+    quickDB.resetFactory()
+  }
 //  public func add(List list: ListModel, response: ((Bool) -> Void)?) {
 ////    quickDB.insert(model: list, withTag: Constants.Tags.list, completion: response)
 //  }

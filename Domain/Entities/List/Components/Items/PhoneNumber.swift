@@ -15,12 +15,12 @@ public extension ComponentElements {
 		//MARK: - Input component of Phone Number
 		public struct Input: QuickIndexable, InputComponentType {
       public let uid: UUID
-			public let title: String
+			public let placeHolderTitle: String
 			public var listUID: UUID
 			
-			public init(title: String, listUID: UUID) {
+			public init(placeHolderTitle: String, listUID: UUID) {
         self.uid = UUID()
-				self.title = title
+				self.placeHolderTitle = placeHolderTitle
 				self.listUID = listUID
 			}
 			public func asEnum() -> ComponentType.Inputs {

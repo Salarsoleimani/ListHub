@@ -29,6 +29,9 @@ public protocol DatabaseManagerProtocol {
 	func update(Item outputs: [OutputComponentType], response:  ((Bool) -> Void)?)
 	func update(Item inputs: [InputComponentType], response:  ((Bool) -> Void)?)
 	func delete(Item input: InputComponentType, response: ((Bool) -> Void)?)
+  
+  // Shared
+  func resetFactory()
 }
 
 

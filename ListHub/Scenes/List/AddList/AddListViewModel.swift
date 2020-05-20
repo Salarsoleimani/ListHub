@@ -25,6 +25,7 @@ final class AddListViewModel: ViewModelType {
       listModel.iconId = icon!.model.id
     }
   }
+  private var selectedComponents = [CreationComponentType]()
   // MARK:- Initialization
   init(navigator: AddListNavigator) {
     self.navigator = navigator
@@ -37,24 +38,28 @@ final class AddListViewModel: ViewModelType {
     let iconTrigger = input.iconTrigger.map { [navigator] _ -> Void in
       navigator.toIcons(delegate: input.delegate, icon: input.icon)
     }
-    let selectedComponent = input.selectingComponent.map { (component) -> CreationComponentType? in
+    
+    let selectedComponent = input.selectingComponent.map { [unowned self] (component) -> CreationComponentType? in
+      let comp = component.asCreationComponentType()
+      self.selectedComponents.append(comp)
+      return comp
+    }
+    
+//    let previousSelectedComponents = BehaviorRelay<[CreationComponentType]>(value: [CreationComponentType]())
+//
+//    let currentSelectedComponents = Driver.combineLatest(selectedComponent, previousSelectedComponents.asDriver()).map { [previousSelectedComponents] (selected, componets) -> [CreationComponentType] in
+//      var allComponents = componets
+//      if let safeComponent = selected {
+//        allComponents.append(safeComponent)
+//      }
+//      previousSelectedComponents.accept(allComponents)
+//      return allComponents
+//    }.do(onNext: { (comps) in
+//      print(comps)
+//    })
+    let addListTrigger = input.addListTrigger.map { [selectedComponents, navigator, dbManager] _ -> Void in
       
-      return component.asCreationComponentType()
-    }
-    
-    let previousSelectedComponents = Driver.just([CreationComponentType]())
-    
-    let currentSelectedComponents = Driver.combineLatest(selectedComponent, previousSelectedComponents).map { (selected, componets) -> [CreationComponentType] in
-      var allComponents = componets
-      if let safeComponent = selected {
-        allComponents.append(safeComponent)
-      }
-      return allComponents
-    }
-    let addListTrigger = input.addListTrigger.flatMapLatest { () -> Driver<[CreationComponentType]> in
-      return currentSelectedComponents
-    }.do(onNext: { [dbManager, navigator](items) in
-      let components = items.compactMap { (item) -> InputComponentType in
+      let components = selectedComponents.compactMap { (item) -> InputComponentType in
         return item.asInput(listUID: self.listModel.uid)
       }
       dbManager.add(List: self.listModel, components: components) { [navigator] (isAdded) in
@@ -62,7 +67,17 @@ final class AddListViewModel: ViewModelType {
           navigator.popToLists(self.listModel)
         }
       }
-    }).mapToVoid()
+    }
+//    .do(onNext: { [dbManager, navigator](items) in
+//      let components = items.compactMap { (item) -> InputComponentType in
+//        return item.asInput(listUID: self.listModel.uid)
+//      }
+//      dbManager.add(List: self.listModel, components: components) { [navigator] (isAdded) in
+//        if isAdded {
+//          navigator.popToLists(self.listModel)
+//        }
+//      }
+//    }).mapToVoid()
     
     return Output(iconTrigger: iconTrigger, components: allComponents, selectedComponent: selectedComponent.asObservable(), addListTrigger: addListTrigger)
   }

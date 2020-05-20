@@ -14,7 +14,7 @@ class PhoneNumberInputCell: UICollectionViewCell {
   
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var titleTextField: UITextField!
-  let disposeBag = DisposeBag()
+  var disposeBag: DisposeBag?
   var viewModel: PhoneNumberInputViewModel!
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -26,9 +26,11 @@ class PhoneNumberInputCell: UICollectionViewCell {
 extension PhoneNumberInputCell: BEKBindableCell {
   typealias ViewModeltype = PhoneNumberInputViewModel
   func bindData(withViewModel viewModel: PhoneNumberInputViewModel) {
+    disposeBag = DisposeBag()
     self.viewModel = viewModel
+    titleLabel.text = viewModel.placeHolderTitle
     titleTextField.rx.text.orEmpty.subscribe(onNext: { [unowned self] (text) in
-      self.viewModel.title = text
-    }).disposed(by: disposeBag)
+      self.viewModel.inputValue = text
+    }).disposed(by: disposeBag!)
   }
 }

@@ -12,12 +12,12 @@ import Domain
 struct PhoneNumberInputViewModel: InputViewModelProtocol {
   typealias CellType = PhoneNumberInputCell
   
-  var title: String = ""
+  var placeHolderTitle: String = ""
   var inputValue: String = ""
   let model: ComponentElements.PhoneNumber.Input
   
   init(model: ComponentElements.PhoneNumber.Input) {
-    self.title = model.title
+    self.placeHolderTitle = model.placeHolderTitle
     self.model = model
   }
   func asEnum() -> ComponentType.Inputs {
